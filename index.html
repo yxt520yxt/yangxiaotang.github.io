@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   
-
   
   <title>YangXiaoTang&#39;Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Technology make world more beautiful!So, let us roll.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="YangXiaoTang&#39;Blog">
@@ -14,7 +13,7 @@
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
 <meta property="og:description" content="Technology make world more beautiful!So, let us roll.">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="YangXiaoTang">
+<meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/yangxiaotang.github.io/atom.xml" title="YangXiaoTang&#39;Blog" type="application/atom+xml">
@@ -23,11 +22,18 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/yangxiaotang.github.io/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/yangxiaotang.github.io/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
@@ -70,12 +76,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-database-md" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-GoMain" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/07/database-md/" class="article-date">
-  <time datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
+    <a href="/yangxiaotang.github.io/2020/07/10/GoMain/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T07:31:26.000Z" itemprop="datePublished">2020-07-10</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -84,19 +94,24 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/yangxiaotang.github.io/2020/07/07/database-md/">stary_database.md</a>
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/GoMain/">GoMain</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <pre><code>----------------------------------------
+使用一个tab或者四个空格也是可以当成代码块的
+----------------------------------------</code></pre><p><code>echo &#39;使用反引号也可以被当成代码&#39;</code></p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fmt.<span class="built_in">println</span>(<span class="string">"也可以使用三个反引号来包含代码块"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 输出到标准错误流并且打印 print(index)</span></span><br><span class="line"><span class="comment"> * fmt.print()标准输出流</span></span><br><span class="line"><span class="comment"> * fmt.printf()格式化输出</span></span><br><span class="line"><span class="comment"> * fmt.Sprint()返回一个格式化的字符串</span></span><br><span class="line"><span class="comment"> * 在实现算法的同时还要尽量考虑到所有的边界条件，减少bug</span></span><br><span class="line"><span class="comment"> * 该代码用来本地测试算法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// 两数之和</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	indexArray := twoSum([]int&#123;1, 5, 3, 2, 7&#125;, 10)</span></span><br><span class="line"><span class="comment">	for _, index := range indexArray &#123;</span></span><br><span class="line"><span class="comment">		fmt.Println(index)</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	fmt.Printf("%v", indexArray)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 打家劫舍</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	fmt.Println(rob([]int&#123;1, 2, 3, 1&#125;))</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/database-md/" data-id="ckcfmfuvn0000do51b3st70p6" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/GoMain/" data-id="ckcfwo9ji0001dk519dqbbay7" data-title="GoMain" class="article-share-link">Share</a>
+      
       
       
     </footer>
@@ -105,11 +120,264 @@
 </article>
 
 
+
   
-    <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-RobHouse" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/07/linux/" class="article-date">
-  <time datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
+    <a href="/yangxiaotang.github.io/2020/07/10/RobHouse/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T07:27:33.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/RobHouse/">RobHouse</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 相邻的房子不可以同时间盗窃，那么每个房子存在两种状态，偷或者不偷</span></span><br><span class="line"><span class="comment"> * 运用动态规划的思维来解决问题，当前状态依赖于上个状态，（特殊处理第一个数据）需要使用两个一维数组或者一个二维数组来进行存储状态</span></span><br><span class="line"><span class="comment"> * 进阶可以直接使用常数个变量来存储</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">rob</span><span class="params">(nums []<span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	length := <span class="built_in">len</span>(nums)</span><br><span class="line">	<span class="comment">// array长度0，直接输出0</span></span><br><span class="line">	<span class="keyword">if</span> length == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> length == <span class="number">1</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> nums[<span class="number">0</span>]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 使用三个变量来存储中间状态</span></span><br><span class="line">	hasRob, noRob := nums[<span class="number">0</span>], <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">1</span>; i &lt; length; i++ &#123;</span><br><span class="line">		temp := <span class="number">0</span></span><br><span class="line">		<span class="comment">// 当前房子不打劫的话，当前noRob需要赋值上个状态里的最大值</span></span><br><span class="line">		<span class="keyword">if</span> hasRob &gt; noRob &#123;</span><br><span class="line">			temp = hasRob</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			temp = noRob</span><br><span class="line">		&#125;</span><br><span class="line">		hasRob = noRob + nums[i]</span><br><span class="line">		noRob = temp</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// return the max value of final state</span></span><br><span class="line">	<span class="keyword">if</span> hasRob &gt; noRob &#123;</span><br><span class="line">		<span class="keyword">return</span> hasRob</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> noRob</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/RobHouse/" data-id="ckcfwo9jf0000dk51bsgvf47h" data-title="RobHouse" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-TwoSum" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/10/TwoSum/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T06:54:17.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/TwoSum/">TwoSum</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 两数之和暴力计算需要n平方的时间复杂度</span></span><br><span class="line"><span class="comment"> * 优化算法，可以使用牺牲空间换取时间的策略</span></span><br><span class="line"><span class="comment"> * 建立map, key的值为target - 当前数，value存的是当前数的下标，然后再遍历一次原数组就可以得到答案（n级别）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">twoSum</span><span class="params">(nums []<span class="keyword">int</span>, target <span class="keyword">int</span>)</span> []<span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * solution one: 暴力破解(解题先暴力，再思考优化)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">for</span> i, length := <span class="number">0</span>, <span class="built_in">len</span>(nums); i &lt; length; i++ &#123;</span><br><span class="line">		<span class="keyword">for</span> j := i + <span class="number">1</span>; j &lt; length; j++ &#123;</span><br><span class="line">			<span class="keyword">if</span> nums[i] + nums[j] == target &#123;</span><br><span class="line">				<span class="keyword">return</span> []<span class="keyword">int</span>&#123;i, j&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> []<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * solution two: 使用数据结构提高时间的效率</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// contribute map</span></span><br><span class="line">	numMap := <span class="keyword">map</span>[<span class="keyword">int</span>]<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">	<span class="keyword">for</span> i, length := <span class="number">0</span>, <span class="built_in">len</span>(nums); i &lt; length; i++ &#123;</span><br><span class="line">		numMap[target - nums[i]] = i</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> i, length := <span class="number">0</span>, <span class="built_in">len</span>(nums); i &lt; length; i++ &#123;</span><br><span class="line">		<span class="keyword">if</span> mapIndex := numMap[nums[i]]; mapIndex != <span class="number">0</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> mapIndex == i &#123;</span><br><span class="line">				<span class="keyword">continue</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> []<span class="keyword">int</span>&#123;i, mapIndex&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> []<span class="keyword">int</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/TwoSum/" data-id="ckcfwo9jk0004dk510s5bgpcf" data-title="TwoSum" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-golang" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/10/golang/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T06:46:06.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/golang/">golang</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/golang/">golang</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/golang/" data-id="ckcfux61x00007s515w55b3wt" data-title="golang" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/10/mysql/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T06:35:22.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/mysql/">mysql</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/mysql/" data-id="ckcfux62000017s510vzpfo26" data-title="mysql" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-python" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/10/python/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T06:35:00.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/python/">python</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/python/" data-id="ckcfux62500097s51h5y3cvjz" data-title="python" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-leetcode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/10/leetcode/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T06:34:32.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/10/leetcode/">leetcode</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/leetcode/" data-id="ckcfux62300037s516pmsa6wu" data-title="leetcode" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-database-md" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/07/database-md/" class="article-date">
+  <time class="dt-published" datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
 </a>
     
   </div>
@@ -120,13 +388,55 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/yangxiaotang.github.io/2020/07/07/linux/">linux.md</a>
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/07/database-md/">stary_database.md</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/database-md/" data-id="ckcfubv8g0000w0515goeg4h7" data-title="stary_database.md" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-linux" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/07/linux/" class="article-date">
+  <time class="dt-published" datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/07/linux/">linux.md</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="结合正则来使用会超级顶！参考：https-www-runoob-com-linux-linux-command-manual-html"><a href="#结合正则来使用会超级顶！参考：https-www-runoob-com-linux-linux-command-manual-html" class="headerlink" title="结合正则来使用会超级顶！参考：https://www.runoob.com/linux/linux-command-manual.html"></a>结合正则来使用会超级顶！参考：<a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-command-manual.html</a></h1><h2 id="目录结构："><a href="#目录结构：" class="headerlink" title="目录结构："></a>目录结构：</h2><p>~ 是用户的主目录使用的是开发者的账号，就是data/developer/  or /home/developer /home/developer<br>如果是个人账户，就是/home/q/个人文件夹<br>/ 则是linux的根目录，所有的事物都会挂载在这下面。<br>cd - 返回的是上次操作所在的目录。(还会打印出完整的路径)</p>
 <hr>
@@ -143,12 +453,16 @@
 <h2 id="PIP"><a href="#PIP" class="headerlink" title="PIP"></a>PIP</h2><p>python -m pip install 和 pip install<br>区别python版本 或者是避免没配置python环境变量</p>
 <p>更改阿里源：<br>pip config set install.trusted-host mirrors.aliyun.com</p>
 <h2 id="目录以及文件的操作"><a href="#目录以及文件的操作" class="headerlink" title="目录以及文件的操作"></a>目录以及文件的操作</h2><p>cd /home 进入 ‘/ home’ 目录’<br>cd .. 返回上一级目录<br>cd ../.. 返回上两级目录<br>cd 进入个人的主目录<br>cd ~user1 进入个人的主目录<br>cd - 返回上次所在的目录<br>pwd 显示工作路径<br>ls 查看目录中的文件<br>ls -F 查看目录中的文件<br>ls -l 显示文件和目录的详细资料<br>ls -a 显示隐藏文件<br>ls <em>[0-9]</em> 显示包含数字的文件名和目录名<br>tree 显示文件和目录由根目录开始的树形结构<br>mv need_to_move_file_or_dir move_to_file_or_dir（move 可以用来给文件改名字）<br>cp -r copy_dir to_dir (-r 就是复制的时候带上文件夹一起)<br>rm -r 递归删除   rm -f强制删除 两个组合起来威力无穷！</p>
-<h2 id="scp-服务器之间的文件传输"><a href="#scp-服务器之间的文件传输" class="headerlink" title="scp 服务器之间的文件传输"></a>scp 服务器之间的文件传输</h2><p>scp 当前服务器文件夹/文件 远程服务器的ip:/home/q/…/…<br>scp  远程服务器的ip:/home/q/…/…   当前服务器文件夹/文件<br>scp 的第二个参数就是传输的目的地。<br>scp -rp 递归进行子目录的传输<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/  （文件夹与文件夹下<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/<br>#scp 命令使用端口号 4588<br>scp -P 4588 172.31.51.207:/usr/local/sin.sh /home/administrator</p>
+<h2 id="scp-服务器之间的文件传输"><a href="#scp-服务器之间的文件传输" class="headerlink" title="scp 服务器之间的文件传输"></a>scp 服务器之间的文件传输</h2><p>scp 当前服务器文件夹/文件 远程服务器的ip:/home/q/…/…<br>scp  远程服务器的ip:/home/q/…/…   当前服务器文件夹/文件<br>scp 的第二个参数就是传输的目的地。<br>scp -rp 递归进行子目录的传输<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/  （文件夹与文件夹下<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/ </p>
+<h2 id="scp-命令使用端口号-4588"><a href="#scp-命令使用端口号-4588" class="headerlink" title="scp 命令使用端口号 4588"></a>scp 命令使用端口号 4588</h2><p>scp -P 4588 172.31.51.207:/usr/local/sin.sh /home/administrator</p>
+<hr>
+<h2 id="不挂断地执行任务，后台执行任务"><a href="#不挂断地执行任务，后台执行任务" class="headerlink" title="不挂断地执行任务，后台执行任务"></a>不挂断地执行任务，后台执行任务</h2><p>nohup command (默认将输出打印到nohup.out这个文件，可以自己指定输出的文件 &gt;&gt; file_name)<br>command&amp; 后台执行任务<br>nohup command&amp; 不挂断后台执行任务</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/linux/" data-id="ckcfmfuvv0002do51d6yagrt8" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/linux/" data-id="ckcfubv8p0002w051hozw6rif" data-title="linux.md" class="article-share-link">Share</a>
+      
       
       
     </footer>
@@ -157,11 +471,12 @@
 </article>
 
 
+
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/07/hello-world/" class="article-date">
-  <time datetime="2020-07-07T01:21:09.737Z" itemprop="datePublished">2020-07-07</time>
+    <a href="/yangxiaotang.github.io/2020/06/21/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2020-06-21T11:26:32.000Z" itemprop="datePublished">2020-06-21</time>
 </a>
     
   </div>
@@ -172,13 +487,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/yangxiaotang.github.io/2020/07/07/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/06/21/hello-world/">Hi, I am Yang, nice to meet you!</a>
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
@@ -197,13 +512,15 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/hello-world/" data-id="ckcfmfuvq0001do51d2xegufl" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/06/21/hello-world/" data-id="ckcfubv8n0001w05118wf68rl" data-title="Hi, I am Yang, nice to meet you!" class="article-share-link">Share</a>
+      
       
       
     </footer>
   </div>
   
 </article>
+
 
 
   
@@ -214,6 +531,13 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -225,7 +549,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -238,15 +562,23 @@
       <ul>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/database-md/">stary_database.md</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/GoMain/">GoMain</a>
           </li>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/linux/">linux.md</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/RobHouse/">RobHouse</a>
           </li>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/hello-world/">Hello World</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/TwoSum/">TwoSum</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/golang/">golang</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/mysql/">mysql</a>
           </li>
         
       </ul>
@@ -261,11 +593,12 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 YangXiaoTang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2020 Mr.Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -276,19 +609,19 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/yangxiaotang.github.io/js/jquery-3.4.1.min.js"></script>
+
 
 
   
-<link rel="stylesheet" href="/yangxiaotang.github.io/fancybox/jquery.fancybox.css">
-
-  
-<script src="/yangxiaotang.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/yangxiaotang.github.io/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
 <script src="/yangxiaotang.github.io/js/script.js"></script>
+
 
 
 

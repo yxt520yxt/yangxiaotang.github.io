@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   
-
   
   <title>linux.md | YangXiaoTang&#39;Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="结合正则来使用会超级顶！参考：https:&#x2F;&#x2F;www.runoob.com&#x2F;linux&#x2F;linux-command-manual.html目录结构：~ 是用户的主目录使用的是开发者的账号，就是data&#x2F;developer&#x2F;  or &#x2F;home&#x2F;developer &#x2F;home&#x2F;developer如果是个人账户，就是&#x2F;home&#x2F;q&#x2F;个人文件夹&#x2F; 则是linux的根目录，所有的事物都会挂载在这下面。cd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux.md">
@@ -15,8 +14,8 @@
 <meta property="og:description" content="结合正则来使用会超级顶！参考：https:&#x2F;&#x2F;www.runoob.com&#x2F;linux&#x2F;linux-command-manual.html目录结构：~ 是用户的主目录使用的是开发者的账号，就是data&#x2F;developer&#x2F;  or &#x2F;home&#x2F;developer &#x2F;home&#x2F;developer如果是个人账户，就是&#x2F;home&#x2F;q&#x2F;个人文件夹&#x2F; 则是linux的根目录，所有的事物都会挂载在这下面。cd">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-07T03:36:11.000Z">
-<meta property="article:modified_time" content="2020-07-10T02:38:13.807Z">
-<meta property="article:author" content="YangXiaoTang">
+<meta property="article:modified_time" content="2020-07-10T03:47:47.764Z">
+<meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/yangxiaotang.github.io/atom.xml" title="YangXiaoTang&#39;Blog" type="application/atom+xml">
@@ -25,11 +24,18 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/yangxiaotang.github.io/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/yangxiaotang.github.io/fancybox/jquery.fancybox.min.css">
+
+  
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
@@ -70,12 +76,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-linux" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/yangxiaotang.github.io/2020/07/07/linux/" class="article-date">
-  <time datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
+  <time class="dt-published" datetime="2020-07-07T03:36:11.000Z" itemprop="datePublished">2020-07-07</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/linux/">linux</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -83,14 +93,14 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h1 class="p-name article-title" itemprop="headline name">
       linux.md
     </h1>
   
 
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="结合正则来使用会超级顶！参考：https-www-runoob-com-linux-linux-command-manual-html"><a href="#结合正则来使用会超级顶！参考：https-www-runoob-com-linux-linux-command-manual-html" class="headerlink" title="结合正则来使用会超级顶！参考：https://www.runoob.com/linux/linux-command-manual.html"></a>结合正则来使用会超级顶！参考：<a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-command-manual.html</a></h1><h2 id="目录结构："><a href="#目录结构：" class="headerlink" title="目录结构："></a>目录结构：</h2><p>~ 是用户的主目录使用的是开发者的账号，就是data/developer/  or /home/developer /home/developer<br>如果是个人账户，就是/home/q/个人文件夹<br>/ 则是linux的根目录，所有的事物都会挂载在这下面。<br>cd - 返回的是上次操作所在的目录。(还会打印出完整的路径)</p>
 <hr>
@@ -107,12 +117,16 @@
 <h2 id="PIP"><a href="#PIP" class="headerlink" title="PIP"></a>PIP</h2><p>python -m pip install 和 pip install<br>区别python版本 或者是避免没配置python环境变量</p>
 <p>更改阿里源：<br>pip config set install.trusted-host mirrors.aliyun.com</p>
 <h2 id="目录以及文件的操作"><a href="#目录以及文件的操作" class="headerlink" title="目录以及文件的操作"></a>目录以及文件的操作</h2><p>cd /home 进入 ‘/ home’ 目录’<br>cd .. 返回上一级目录<br>cd ../.. 返回上两级目录<br>cd 进入个人的主目录<br>cd ~user1 进入个人的主目录<br>cd - 返回上次所在的目录<br>pwd 显示工作路径<br>ls 查看目录中的文件<br>ls -F 查看目录中的文件<br>ls -l 显示文件和目录的详细资料<br>ls -a 显示隐藏文件<br>ls <em>[0-9]</em> 显示包含数字的文件名和目录名<br>tree 显示文件和目录由根目录开始的树形结构<br>mv need_to_move_file_or_dir move_to_file_or_dir（move 可以用来给文件改名字）<br>cp -r copy_dir to_dir (-r 就是复制的时候带上文件夹一起)<br>rm -r 递归删除   rm -f强制删除 两个组合起来威力无穷！</p>
-<h2 id="scp-服务器之间的文件传输"><a href="#scp-服务器之间的文件传输" class="headerlink" title="scp 服务器之间的文件传输"></a>scp 服务器之间的文件传输</h2><p>scp 当前服务器文件夹/文件 远程服务器的ip:/home/q/…/…<br>scp  远程服务器的ip:/home/q/…/…   当前服务器文件夹/文件<br>scp 的第二个参数就是传输的目的地。<br>scp -rp 递归进行子目录的传输<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/  （文件夹与文件夹下<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/<br>#scp 命令使用端口号 4588<br>scp -P 4588 172.31.51.207:/usr/local/sin.sh /home/administrator</p>
+<h2 id="scp-服务器之间的文件传输"><a href="#scp-服务器之间的文件传输" class="headerlink" title="scp 服务器之间的文件传输"></a>scp 服务器之间的文件传输</h2><p>scp 当前服务器文件夹/文件 远程服务器的ip:/home/q/…/…<br>scp  远程服务器的ip:/home/q/…/…   当前服务器文件夹/文件<br>scp 的第二个参数就是传输的目的地。<br>scp -rp 递归进行子目录的传输<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/  （文件夹与文件夹下<br>scp -r /home/space/music/ 172.31.51.207:/home/root/others/ </p>
+<h2 id="scp-命令使用端口号-4588"><a href="#scp-命令使用端口号-4588" class="headerlink" title="scp 命令使用端口号 4588"></a>scp 命令使用端口号 4588</h2><p>scp -P 4588 172.31.51.207:/usr/local/sin.sh /home/administrator</p>
+<hr>
+<h2 id="不挂断地执行任务，后台执行任务"><a href="#不挂断地执行任务，后台执行任务" class="headerlink" title="不挂断地执行任务，后台执行任务"></a>不挂断地执行任务，后台执行任务</h2><p>nohup command (默认将输出打印到nohup.out这个文件，可以自己指定输出的文件 &gt;&gt; file_name)<br>command&amp; 后台执行任务<br>nohup command&amp; 不挂断后台执行任务</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/linux/" data-id="ckcfmfuvv0002do51d6yagrt8" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/07/linux/" data-id="ckcfubv8p0002w051hozw6rif" data-title="linux.md" class="article-share-link">Share</a>
+      
       
       
     </footer>
@@ -131,9 +145,9 @@
     </a>
   
   
-    <a href="/yangxiaotang.github.io/2020/07/07/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/06/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Hi, I am Yang, nice to meet you!</div>
     </a>
   
 </nav>
@@ -141,11 +155,19 @@
   
 </article>
 
+
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -157,7 +179,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/yangxiaotang.github.io/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -170,15 +192,23 @@
       <ul>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/database-md/">stary_database.md</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/GoMain/">GoMain</a>
           </li>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/linux/">linux.md</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/RobHouse/">RobHouse</a>
           </li>
         
           <li>
-            <a href="/yangxiaotang.github.io/2020/07/07/hello-world/">Hello World</a>
+            <a href="/yangxiaotang.github.io/2020/07/10/TwoSum/">TwoSum</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/golang/">golang</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/mysql/">mysql</a>
           </li>
         
       </ul>
@@ -193,11 +223,12 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 YangXiaoTang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2020 Mr.Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -208,19 +239,19 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="/yangxiaotang.github.io/js/jquery-3.4.1.min.js"></script>
+
 
 
   
-<link rel="stylesheet" href="/yangxiaotang.github.io/fancybox/jquery.fancybox.css">
-
-  
-<script src="/yangxiaotang.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/yangxiaotang.github.io/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
 <script src="/yangxiaotang.github.io/js/script.js"></script>
+
 
 
 
