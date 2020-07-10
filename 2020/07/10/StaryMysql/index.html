@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>leetcode | YangXiaoTang&#39;Blog</title>
+  <title>StaryMysql | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Technology make world more beautiful!So, let us roll.">
+  <meta name="description" content="书籍的金券金豆等统计数据 t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推   t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count  period 为3的数据一般是下月月初计算出来的。      t_device 设备表  os_type 0 为安卓， 1为ios   jingyu_ca">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode">
-<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Leetcode/index.html">
+<meta property="og:title" content="StaryMysql">
+<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="Technology make world more beautiful!So, let us roll.">
+<meta property="og:description" content="书籍的金券金豆等统计数据 t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推   t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count  period 为3的数据一般是下月月初计算出来的。      t_device 设备表  os_type 0 为安卓， 1为ios   jingyu_ca">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-01T10:34:32.000Z">
-<meta property="article:modified_time" content="2020-07-10T07:56:35.002Z">
+<meta property="article:published_time" content="2020-07-10T09:22:30.000Z">
+<meta property="article:modified_time" content="2020-07-10T10:39:39.812Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -76,14 +76,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Leetcode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-StaryMysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/01/Leetcode/" class="article-date">
-  <time class="dt-published" datetime="2020-07-01T10:34:32.000Z" itemprop="datePublished">2020-07-01</time>
+    <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T09:22:30.000Z" itemprop="datePublished">2020-07-10</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a>
   </div>
 
   </div>
@@ -94,7 +94,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      leetcode
+      StaryMysql
     </h1>
   
 
@@ -102,11 +102,38 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h2 id="书籍的金券金豆等统计数据"><a href="#书籍的金券金豆等统计数据" class="headerlink" title="书籍的金券金豆等统计数据"></a>书籍的金券金豆等统计数据</h2><blockquote>
+<p>t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推</p>
+<blockquote>
+<ul>
+<li>t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count </li>
+<li>period 为3的数据一般是下月月初计算出来的。</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<p>t_device 设备表</p>
+<blockquote>
+<p>os_type 0 为安卓， 1为ios</p>
+</blockquote>
+</blockquote>
+<h2 id="jingyu-categories-分类字段表格-id；就是对应t-book-new的cat-id"><a href="#jingyu-categories-分类字段表格-id；就是对应t-book-new的cat-id" class="headerlink" title="jingyu_categories:分类字段表格(id；就是对应t_book_new的cat_id)"></a>jingyu_categories:分类字段表格(id；就是对应t_book_new的cat_id)</h2><p>show代表展示的平台。0，1在fictfun，2在dreame，3fictfun+dreame，67fictfun+dreame+inovel</p>
+<h2 id="jingyu-user"><a href="#jingyu-user" class="headerlink" title="jingyu_user:"></a>jingyu_user:</h2><p>使用nickname去匹配别的表格的author_name不是很靠谱，username更加不靠谱，所以使用id去关联t_book_new的 author_id;</p>
+<h2 id="t-book-new"><a href="#t-book-new" class="headerlink" title="t_book_new:"></a>t_book_new:</h2><ul>
+<li>id是对应其它表格里的book_id</li>
+</ul>
+<ul>
+<li>cat_id是分类的id</li>
+<li>is_del = 99 代表上架，1删除，3隐藏， （0，99表示未删除）</li>
+<li>c_rating 内容分级0表示未设置</li>
+<li>author_name 可以跟jingyu_user的nickname对应上</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Leetcode/" data-id="ckcg3485n0005q4514cao5hgc" data-title="leetcode" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcg3485q000dq4518ftce502" data-title="StaryMysql" class="article-share-link">Share</a>
       
       
       
@@ -116,19 +143,19 @@
     
 <nav id="article-nav">
   
-    <a href="/yangxiaotang.github.io/2020/07/01/Golang/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/10/Bash/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          golang
+          Bash
         
       </div>
     </a>
   
   
-    <a href="/yangxiaotang.github.io/2020/07/01/database-md/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/10/Git/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">stary_database.md</div>
+      <div class="article-nav-title">Git</div>
     </a>
   
 </nav>

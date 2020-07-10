@@ -6,15 +6,15 @@
   
   <title>python | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Technology make world more beautiful!So, let us roll.">
+  <meta name="description" content="Pycharm的agent license server：https:&#x2F;&#x2F;fls.jetbrains-agent.com（http也可以使用）  比较操作符 比较操作符 &#x3D;&#x3D; 跟 对象id比较 is ：只有数值型和字符串型的情况下，a is b才为True，当a和b是tuple，list，dict或set型时，a is b为False。&#x3D;&#x3D; 比较的是值value   正则表达式例子：手机号的匹配：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python">
-<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/python/index.html">
+<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/Python/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="Technology make world more beautiful!So, let us roll.">
+<meta property="og:description" content="Pycharm的agent license server：https:&#x2F;&#x2F;fls.jetbrains-agent.com（http也可以使用）  比较操作符 比较操作符 &#x3D;&#x3D; 跟 对象id比较 is ：只有数值型和字符串型的情况下，a is b才为True，当a和b是tuple，list，dict或set型时，a is b为False。&#x3D;&#x3D; 比较的是值value   正则表达式例子：手机号的匹配：">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-03T06:35:00.000Z">
-<meta property="article:modified_time" content="2020-07-10T07:57:39.149Z">
+<meta property="article:modified_time" content="2020-07-10T10:30:07.039Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -76,9 +76,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-python" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Python" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/03/python/" class="article-date">
+    <a href="/yangxiaotang.github.io/2020/07/03/Python/" class="article-date">
   <time class="dt-published" datetime="2020-07-03T06:35:00.000Z" itemprop="datePublished">2020-07-03</time>
 </a>
     
@@ -102,11 +102,70 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p><strong><em>Pycharm的agent license server：<a href="https://fls.jetbrains-agent.com（http也可以使用）" target="_blank" rel="noopener">https://fls.jetbrains-agent.com（http也可以使用）</a></em></strong></p>
+<hr>
+<h2 id="比较操作符"><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h2><ul>
+<li>比较操作符 == 跟 对象id比较 is ：只有数值型和字符串型的情况下，a is b才为True，当a和b是tuple，list，dict或set型时，a is b为False。== 比较的是值value</li>
+</ul>
+<hr>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>例子：手机号的匹配：1[3-9]\d{9}</p>
+<ul>
+<li>. 表示匹配任何的字符，除了\n。</li>
+<li>re1 | re2 表示匹配正则 1或者正则2；</li>
+<li>^ 匹配字符串的开始位置，如果放到括号里面就是对字符集进行求反，例如[^\d]就是非数字的匹配 \A也是表示匹配开始    </li>
+<li>$ 匹配字符串的结束位置  \Z也是表示匹配结束</li>
+<li>* 表示0或者多次</li>
+<li>+ 表示1或者多次</li>
+<li>？ 表示0或者1次</li>
+<li>{n} 前面的表达式出现n次</li>
+<li>{m, n}前面的表达式出现m ~ n 次</li>
+<li>[…]匹配来自括号里面的任一字符</li>
+<li>[a-zA-Z0-9] 匹配括号里面的三个范围的一个字符</li>
+<li>\d 十进制数值型， 与\D相反</li>
+<li>\w 数字字母字符， 与\W相反</li>
+<li>\r 空格字符 [\r\n\t\v\f] ， \R相反</li>
+</ul>
+<hr>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典的遍历可以使用键，值，键值对来进行遍历：</p>
+<ol>
+<li>for key in a:</li>
+<li>for key in a.key():</li>
+<li>for value in a.value():</li>
+<li>for key, value in a.items()</li>
+</ol>
+<ul>
+<li>函数的默认参数值：</li>
+<li>默认参数的值只在定义时计算一次，不可变类型会重新赋值，可变的会增加新的赋值<br>zip() make two lists to be list of tuple.# zip([1, 2, 3] , [1, 2, 3])   [(1,1), …]<br>dict() 一个列表里面是元组组成的。</li>
+</ul>
+<hr>
+<h2 id="json-and-dict"><a href="#json-and-dict" class="headerlink" title="json and dict"></a>json and dict</h2><p>字典转化为json<br>dump()跟load一样是对文件进行操作。<br>dumps()是对字符串进行操作</p>
+<p>stus={‘xiaojun’:’123456’,’xiaohei’:’7890’,’lrx’:’111111’}<br>f=open(‘stus2.json’,’w’,encoding=’utf-8’)<br>json.dump(stus,f,indent=4,ensure_ascii=False)</p>
+<p>参数indent为字符串换行+缩进：<br>res2=json.dumps(stus,indent=4,ensure_ascii=False)#为False时内容输出显示正常的中文，而不是转码</p>
+<p>打开json文件末尾会有染色效果：<br>with open(‘stus.json’,’w’,encoding=’utf-8’ as f:#打开文件</p>
+<p>file = open(‘.\jsonfiles\tests.json’,encoding= ‘utf-8’)<br>file = open()args 加上 ‘w’，可以让文件的内容消失<br>dictionary = json.load(file)</p>
+<hr>
+<h2 id="comfigparser配置函数包"><a href="#comfigparser配置函数包" class="headerlink" title="comfigparser配置函数包"></a>comfigparser配置函数包</h2><p>  创建一个ComfigParser对象，对ini,conf文件进行操作。<br>  读取配置或者是修改配置的话就要读取文件<br>  cgp.read(file)</p>
+<p>  读取配置文件和写配置文件最好分别进行，不要一个文件既读又写。首先，cfg读取<br>  的时候用read，这就要求文件一定要用r/r+/a的方式读才行<br>  ，但是r不能写，r+和a只能在结尾追加，这样cfg在用write写文件的时候，<br>  就会把原来的配置再写到配置文件里去，而不是覆盖方式。</p>
+<hr>
+<h2 id="os-操作系统调用包"><a href="#os-操作系统调用包" class="headerlink" title="os 操作系统调用包"></a>os 操作系统调用包</h2><p>print(os.path.abspath(“.”))   #当前目录的绝对路径</p>
+<p>print(os.path.abspath(r”..”))  #上级目录的绝对路径</p>
+<h2 id="seq"><a href="#seq" class="headerlink" title="seq"></a>seq</h2><p>print([object,…][,seq=’ ‘][,end=’\n’][,file=sys.stdout])</p>
+<p>seq  是在每个对象的文本之间插入一个字符串，如果没有桩底的话，它默认是一个单个空格，传递一个空字符串将会一直分隔符</p>
+<p>end 是添加在打印文本末尾的一个字符串，如果灭有传递的话，它默认的是一个\n 换行字符。传递一个控制符串将会避免在打印的文本的末尾移动到下一个输入行—–下一个print 将会保持添加到当前输出行的末尾。</p>
+<p>file 指定了文本将要发送到的文件、标准流或者其他类似文件的对象；如果没有传递的话，它默认的是sys.stdout。带有一个类似文件的write(string)方法的任何对象都可以传递，但真正的文件应该已经为了输出而打开。</p>
+<p>* 放函数参数前是位置参数</p>
+<p>**则是关键字参数</p>
+<h2 id="创建虚拟环境："><a href="#创建虚拟环境：" class="headerlink" title="创建虚拟环境："></a>创建虚拟环境：</h2><ul>
+<li>virtualenv venv</li>
+<li>source venv/bin/activate</li>
+<li>deactivate</li>
+<li>pip3 install -r requirements.txt</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/python/" data-id="ckcfux62500097s51h5y3cvjz" data-title="python" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/Python/" data-id="ckcg3485p0009q451btp7fi6l" data-title="python" class="article-share-link">Share</a>
       
       
       
@@ -126,7 +185,7 @@
     </a>
   
   
-    <a href="/yangxiaotang.github.io/2020/07/02/mysql/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/02/Mysql/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">mysql</div>
     </a>
@@ -145,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -173,23 +232,23 @@
       <ul>
         
           <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/Bash/">Bash</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/">StaryMysql</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/10/Git/">Git</a>
+          </li>
+        
+          <li>
             <a href="/yangxiaotang.github.io/2020/07/06/GoMain/">GoMain</a>
           </li>
         
           <li>
             <a href="/yangxiaotang.github.io/2020/07/06/RobHouse/">RobHouse</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/TwoSum/">TwoSum</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/03/python/">python</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/02/mysql/">mysql</a>
           </li>
         
       </ul>

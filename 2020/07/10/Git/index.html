@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>leetcode | YangXiaoTang&#39;Blog</title>
+  <title>Git | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Technology make world more beautiful!So, let us roll.">
+  <meta name="description" content="git的几个区  workspace：工作区 Index&#x2F;Stage: 暂存区 Repository：本地仓库 Remote：远程仓库   下载安装完git之后，添加用户名以及邮箱的配置 git config –global user.name “yangxiaotang” git config –global user.email yangxiaotang@stary.ltd  windows跟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode">
-<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Leetcode/index.html">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="Technology make world more beautiful!So, let us roll.">
+<meta property="og:description" content="git的几个区  workspace：工作区 Index&#x2F;Stage: 暂存区 Repository：本地仓库 Remote：远程仓库   下载安装完git之后，添加用户名以及邮箱的配置 git config –global user.name “yangxiaotang” git config –global user.email yangxiaotang@stary.ltd  windows跟">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-01T10:34:32.000Z">
-<meta property="article:modified_time" content="2020-07-10T07:56:35.002Z">
+<meta property="article:published_time" content="2020-07-10T07:31:26.000Z">
+<meta property="article:modified_time" content="2020-07-10T09:21:03.589Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -76,14 +76,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Leetcode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/01/Leetcode/" class="article-date">
-  <time class="dt-published" datetime="2020-07-01T10:34:32.000Z" itemprop="datePublished">2020-07-01</time>
+    <a href="/yangxiaotang.github.io/2020/07/10/Git/" class="article-date">
+  <time class="dt-published" datetime="2020-07-10T07:31:26.000Z" itemprop="datePublished">2020-07-10</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/git/">git</a>
   </div>
 
   </div>
@@ -94,7 +94,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      leetcode
+      Git
     </h1>
   
 
@@ -102,11 +102,30 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h3 id="git的几个区"><a href="#git的几个区" class="headerlink" title="git的几个区"></a>git的几个区</h3><blockquote>
+<ul>
+<li>workspace：工作区</li>
+<li>Index/Stage: 暂存区</li>
+<li>Repository：本地仓库</li>
+<li>Remote：远程仓库</li>
+</ul>
+</blockquote>
+<h3 id="下载安装完git之后，添加用户名以及邮箱的配置"><a href="#下载安装完git之后，添加用户名以及邮箱的配置" class="headerlink" title="下载安装完git之后，添加用户名以及邮箱的配置"></a>下载安装完git之后，添加用户名以及邮箱的配置</h3><ul>
+<li>git config –global user.name “yangxiaotang”</li>
+<li>git config –global user.email <a href="mailto:yangxiaotang@stary.ltd">yangxiaotang@stary.ltd</a></li>
+</ul>
+<h3 id="windows跟linux的换行符不一致，可能导致开发不一致"><a href="#windows跟linux的换行符不一致，可能导致开发不一致" class="headerlink" title="windows跟linux的换行符不一致，可能导致开发不一致"></a>windows跟linux的换行符不一致，可能导致开发不一致</h3><ul>
+<li>git config –global core.autocrlf input</li>
+<li>git config –global core.safecrlf warn</li>
+</ul>
+<h3 id="上线时间跟当前不一致，创建新的分支"><a href="#上线时间跟当前不一致，创建新的分支" class="headerlink" title="上线时间跟当前不一致，创建新的分支"></a>上线时间跟当前不一致，创建新的分支</h3><p>git fetch 拉取最新的信息<br>git checkout origin/master 切换分支<br>git checkout -f来撤销自己的修改<br>git checkout -b v1.1 = git branch v1.1 + git checkout v1.1(在切换后的分支创建分支)</p>
+<p>查看本地分支对应关联的远端分支<br>git branch -vv</p>
+<p>see<a href="http://static.runoob.com/images/runoob-logo.png" target="_blank" rel="noopener">runnob</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Leetcode/" data-id="ckcg3485n0005q4514cao5hgc" data-title="leetcode" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/" data-id="ckcg0etz40000jw51fh6o3zrq" data-title="Git" class="article-share-link">Share</a>
       
       
       
@@ -116,19 +135,19 @@
     
 <nav id="article-nav">
   
-    <a href="/yangxiaotang.github.io/2020/07/01/Golang/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          golang
+          StaryMysql
         
       </div>
     </a>
   
   
-    <a href="/yangxiaotang.github.io/2020/07/01/database-md/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/06/GoMain/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">stary_database.md</div>
+      <div class="article-nav-title">GoMain</div>
     </a>
   
 </nav>
