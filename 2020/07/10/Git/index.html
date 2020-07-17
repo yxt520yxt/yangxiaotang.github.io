@@ -6,15 +6,15 @@
   
   <title>Git | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="git的几个区  workspace：工作区 Index&#x2F;Stage: 暂存区 Repository：本地仓库 Remote：远程仓库   下载安装完git之后，添加用户名以及邮箱的配置 git config –global user.name “yangxiaotang” git config –global user.email yangxiaotang@stary.ltd  windows跟">
+  <meta name="description" content="注意 git 的命令只能在git仓库目录下运行， git init 除外 git commit -m ‘有用的描述’ 可以方便查找   * 版本控制系统，只能跟踪文本文件的改动 * linux上安装gitsudo apt-get install gitsudo apt-get install git-core(老一点的linux版本) git的几个区  workspace：工作区 Index&#x2F;St">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git">
 <meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="git的几个区  workspace：工作区 Index&#x2F;Stage: 暂存区 Repository：本地仓库 Remote：远程仓库   下载安装完git之后，添加用户名以及邮箱的配置 git config –global user.name “yangxiaotang” git config –global user.email yangxiaotang@stary.ltd  windows跟">
+<meta property="og:description" content="注意 git 的命令只能在git仓库目录下运行， git init 除外 git commit -m ‘有用的描述’ 可以方便查找   * 版本控制系统，只能跟踪文本文件的改动 * linux上安装gitsudo apt-get install gitsudo apt-get install git-core(老一点的linux版本) git的几个区  workspace：工作区 Index&#x2F;St">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-10T07:31:26.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:21:03.589Z">
+<meta property="article:modified_time" content="2020-07-16T06:01:00.486Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -102,7 +102,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="git的几个区"><a href="#git的几个区" class="headerlink" title="git的几个区"></a>git的几个区</h3><blockquote>
+        <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
+<li>git 的命令只能在git仓库目录下运行， git init 除外</li>
+<li>git commit -m ‘有用的描述’ 可以方便查找</li>
+<li></li>
+</ol>
+<p><strong>* 版本控制系统，只能跟踪文本文件的改动 *</strong></p>
+<h3 id="linux上安装git"><a href="#linux上安装git" class="headerlink" title="linux上安装git"></a>linux上安装git</h3><p>sudo apt-get install git<br>sudo apt-get install git-core(老一点的linux版本)</p>
+<h3 id="git的几个区"><a href="#git的几个区" class="headerlink" title="git的几个区"></a>git的几个区</h3><blockquote>
 <ul>
 <li>workspace：工作区</li>
 <li>Index/Stage: 暂存区</li>
@@ -121,11 +128,41 @@
 <h3 id="上线时间跟当前不一致，创建新的分支"><a href="#上线时间跟当前不一致，创建新的分支" class="headerlink" title="上线时间跟当前不一致，创建新的分支"></a>上线时间跟当前不一致，创建新的分支</h3><p>git fetch 拉取最新的信息<br>git checkout origin/master 切换分支<br>git checkout -f来撤销自己的修改<br>git checkout -b v1.1 = git branch v1.1 + git checkout v1.1(在切换后的分支创建分支)</p>
 <p>查看本地分支对应关联的远端分支<br>git branch -vv</p>
 <p>see<a href="http://static.runoob.com/images/runoob-logo.png" target="_blank" rel="noopener">runnob</a></p>
+<hr>
+<h3 id="git常规使用"><a href="#git常规使用" class="headerlink" title="git常规使用"></a>git常规使用</h3><p>git init（初始化仓库）<br>git add <file> 示例：git add file1, file2…<br>git commit -m <message>  示例： git commit -m ‘add readme.md file’<br>git diff file   示例： git diff README.md (可以查看本地仓库跟远程仓库中该文件的diff)<br>git log 查看提交的日志 git log –pretty=oneline （一个提交变成一行输出）</p>
+<h3 id="git常见问题"><a href="#git常见问题" class="headerlink" title="git常见问题"></a>git常见问题</h3><p>1、.gitignore文件不生效（如果先将项目添加的git仓库，后添加忽略文件，不清理git的缓存，忽略文件是不会生效的。）</p>
+<p>git rm -r –cached .<br>git add .<br>git commit -m ‘update .gitignore’</p>
+<p>最后更新.gitignore文件再次提交</p>
+<p>2、不同分支合并或拷贝单个文件</p>
+<p>另外如果只想将feature分支的某个文件f.txt合并到master分支上。<br>1: git checkout master<br>2: git checkout –patch feature f.txt<br>第一个命令： 切换到master分支；<br>第二个命令：合并feature分支上f文件到master分支上，将feature分支上 f 文件追加补丁到master分支上 f文件。你可以接受或者拒绝补丁内容。即提示输y或者n</p>
+<p>如果只是简单的将feature分支的文件f.txt copy到master分支上；<br>git checkout master<br>git checkout feature /p/d/f.txt</p>
+<p>解释：<br>y - 存储这个hunk<br>n - 不存储这个hunk<br>q - 离开，不存储这个hunk和其他hunk<br>a - 存储这个hunk和这个文件后面的hunk<br>d - 不存储这个hunk和这个文件后面的hunk<br>g - 选择一个hunk<br>/ - 通过正则查找hunk<br>j - 不确定是否存储这个hunk，看下一个不确定的hunk<br>J - 不确定是否存储这个hunk，看下一个hunk<br>k - 不确定是否存储这个hunk，看上一个不确定的hunk<br>K -不确定是否存储这个hunk，看上一个hunk<br>s - 把当前的hunk分成更小的hunks<br>e - 手动编辑当前的hunk<br>? - 输出帮助信息</p>
+<p> 3、git比较两个分支的文件的差异</p>
+<p>git diff branch1 branch2 –stat   //显示出所有有差异的文件列表<br>git diff branch1 branch2 文件名(带路径)   //显示指定文件的详细差异<br>git diff branch1 branch2                   //显示出所有有差异的文件的详细差异</p>
+<p>4、撤销修改<br>git checkout – “file_name” 将代码回退<br>如果已add到暂存区 就回退到刚添加到暂存区的版本<br>如果没add到暂存区 就回退到版本库的版本<br>5、删除文件<br>一般是从文件管理器将文件删除<br>git status查看哪些文件被删除<br>如果确实要删除该文件 就使用 git rm “file_name” 将该文件从版本库中删除<br>如果是删错了 可以使用 git checkout – “file_name” 将误删文件恢复到最新版本</p>
+<p>6、单个文件历史记录<br>git log –oneline .a.txt<br>7、单个文件回退到历史版本<br>git reset 120a893 a.txt</p>
+<p>8、查看单文件工作区和版本库里面最新版本的区别（上下键查看，q是退出命令）<br>git diff HEAD – readme.txt</p>
+<p>9、在工作中，遇到一个问题，在git merge后，发生冲突，而当冲突较多的时候，逐个检查冲突，有的时候会遗漏一些文件，导致带有冲突标记的文件上传到了Git服务器上。<br>使用以下命令可以快速检查是否还存在有带有冲突标记的文件。<br>git diff –check</p>
+<p>10、删除本地分支</p>
+<p>git branch -d 分支名</p>
+<p>11、删除远程分支</p>
+<p>git push origin –delete 远程分支名称</p>
+<p>取消远程关联<br>git remote remove origin<br>从命令行创建一个新的仓库</p>
+<ul>
+<li>touch README.md</li>
+<li>git init</li>
+<li>git add README.md</li>
+<li>git commit -m “first commit”</li>
+<li>git remote add origin <a href="http://10.0.0.63/SH/test_lib.git" target="_blank" rel="noopener">http://10.0.0.63/SH/test_lib.git</a></li>
+<li>git push -u origin master<br>从命令行推送已经创建的仓库</li>
+<li>git remote add origin <a href="http://10.0.0.63/SH/test_lib.git" target="_blank" rel="noopener">http://10.0.0.63/SH/test_lib.git</a></li>
+<li>git push -u origin master</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/" data-id="ckcg0etz40000jw51fh6o3zrq" data-title="Git" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/" data-id="ckcpjxtta0002as517a2da8d5" data-title="Git" class="article-share-link">Share</a>
       
       
       
@@ -164,7 +201,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -192,23 +229,23 @@
       <ul>
         
           <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/README/">README</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/">ClimbStair</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/14/use-bert/">use_bert</a>
+          </li>
+        
+          <li>
             <a href="/yangxiaotang.github.io/2020/07/10/Bash/">Bash</a>
           </li>
         
           <li>
             <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/">StaryMysql</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/10/Git/">Git</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/GoMain/">GoMain</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/RobHouse/">RobHouse</a>
           </li>
         
       </ul>

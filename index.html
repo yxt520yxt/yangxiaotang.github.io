@@ -76,6 +76,148 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-README" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/16/README/" class="article-date">
+  <time class="dt-published" datetime="2020-07-16T07:53:04.000Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/16/README/">README</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="ERROR"><a href="#ERROR" class="headerlink" title="ERROR"></a>ERROR</h3><ul>
+<li>Template render error , expected end of comment, got end of file<blockquote>
+<ol>
+<li>md文章里面出现了 <code>{ #</code> ，{ 跟 # 中间没有空格就会报错，被当成了注释，所以出现了错误</li>
+<li>排查<blockquote>
+<ul>
+<li>hexo g –debug</li>
+<li>输出的错误文件名，进入文件修改就可以了</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/16/README/" data-id="ckcpjxtte0007as51gzlp9ie6" data-title="README" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ClimbStair" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/" class="article-date">
+  <time class="dt-published" datetime="2020-07-16T07:19:23.000Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/16/ClimbStair/">ClimbStair</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">climbStairs</span><span class="params">(n <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	<span class="comment">// 这个的解题符合一个 斐波那契数字的规律， 1 1 2 3 5 8 ...</span></span><br><span class="line">	<span class="comment">// 当前数字等于前两个数字之和, 蕴含动态规划的思想</span></span><br><span class="line">	<span class="keyword">if</span> n &lt; <span class="number">4</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> n</span><br><span class="line">	&#125;</span><br><span class="line">	temp1 := <span class="number">2</span></span><br><span class="line">	temp2 := <span class="number">3</span></span><br><span class="line">	<span class="keyword">for</span> ; n &gt; <span class="number">3</span>; n -- &#123;</span><br><span class="line">		temp3 := temp1 + temp2</span><br><span class="line">		temp1 = temp2</span><br><span class="line">		temp2 = temp3</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> temp2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/16/ClimbStair/" data-id="ckcpjxtt80001as510kegfugp" data-title="ClimbStair" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-use-bert" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/14/use-bert/" class="article-date">
+  <time class="dt-published" datetime="2020-07-14T03:09:49.000Z" itemprop="datePublished">2020-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/14/use-bert/">use_bert</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="使用bert-serving之前需要先安装tensorflow"><a href="#使用bert-serving之前需要先安装tensorflow" class="headerlink" title="使用bert_serving之前需要先安装tensorflow"></a>使用bert_serving之前需要先安装tensorflow</h3><p>pip install tensorflow==1.12(需要1.10及以上的版本)<br>pip install bert-serving-server==1.9.1<br>pip install bert-serving-client==1.9.1</p>
+<hr>
+<h3 id="下载bert模型并解压"><a href="#下载bert模型并解压" class="headerlink" title="下载bert模型并解压"></a>下载bert模型并解压</h3><p><a href="https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip" target="_blank" rel="noopener">https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip</a></p>
+<hr>
+<h3 id="启动bert-serving服务"><a href="#启动bert-serving服务" class="headerlink" title="启动bert_serving服务"></a>启动bert_serving服务</h3><p>bert-serving-start -model_dir D:\python\chinese_L-12_H-768_A-12\chinese_L-12_H-768_A-12 -num_worker=2</p>
+<h3 id="使用命令行来运行脚本，因为IDE运行会报错"><a href="#使用命令行来运行脚本，因为IDE运行会报错" class="headerlink" title="使用命令行来运行脚本，因为IDE运行会报错"></a>使用命令行来运行脚本，因为IDE运行会报错</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/14/use-bert/" data-id="ckcpjxttq000qas512soa0sj9" data-title="use_bert" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Bash" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/yangxiaotang.github.io/2020/07/10/Bash/" class="article-date">
@@ -102,13 +244,240 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>shell脚本的第一行使用#！/bin/bash 指定解释器<br>if 逻辑分支使用：<br>if []; then<br>command<br>elif [];then<br>command<br>else<br>command<br>fi</p>
-<p>if [ -? ]跟文件有关的参数：<br>-e 判断文件是否存在<br>-x 判断文件是否是可执行文件<br>-d 判断是否为文件夹<br>-f 判断是否为常规的文件<br>-r read<br>-w write<br>-s size 是否为0<br>-ot older than<br>-nt newer than<br>-l  link<br>-h hard link</p>
+        <h2 id="shell脚本的第一行使用-！-bin-bash-指定解释器"><a href="#shell脚本的第一行使用-！-bin-bash-指定解释器" class="headerlink" title="shell脚本的第一行使用#！/bin/bash 指定解释器"></a>shell脚本的第一行使用#！/bin/bash 指定解释器</h2><h3 id="运行shell脚本"><a href="#运行shell脚本" class="headerlink" title="运行shell脚本"></a>运行shell脚本</h3><ul>
+<li>作为可执行程序运行，需要先赋予脚本可执行权限<blockquote>
+<p>chmod +x shell_file<br>./yxt.sh</p>
+</blockquote>
+</li>
+<li>作为解释器参数<blockquote>
+<p>/bin/bash/ yxt.sh</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量"></a>shell变量</h2><ul>
+<li>变量名跟=不能有空格</li>
+<li>定义变量的时候，不需要$</li>
+<li>不可以使用标点符号，不能以数字开头，并且不能使用bash的关键字</li>
+<li>可以使用下划线</li>
+<li>变量可以重新定义，但是不可以重新赋值</li>
+<li>readonly variable 变量设置为只读变量，不可重新定义    </li>
+<li>unset 删除变量，不可以删除只读变量</li>
+<li>没有强制使用{}包裹变量，规范最好就写上</li>
+</ul>
+<hr>
+<blockquote>
+<p>三种变量</p>
+<blockquote>
+<ol>
+<li>局部变量 </li>
+<li>环境变量</li>
+<li>shell变量</li>
+</ol>
+</blockquote>
+</blockquote>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="定义字符串的内容"><a href="#定义字符串的内容" class="headerlink" title="定义字符串的内容"></a>定义字符串的内容</h3><ol>
+<li>单引号  </li>
+<li>双引号  </li>
+<li>或者两个都不要  <blockquote>
+<p>双引号可以做到转义以及内嵌变量，单引号不行</p>
+</blockquote>
+<h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3></li>
+</ol>
+<ul>
+<li>使用双引号基本不需要拼接，变量直接写进去就行了</li>
+<li>单引号的拼接,也不需要+，直接拼起来就行<h3 id="字符串的长度获取"><a href="#字符串的长度获取" class="headerlink" title="字符串的长度获取"></a>字符串的长度获取</h3>${ #variable_name}(#前的空格是为了越过hexo的错误)<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3>${variable_name:start_index:length}<h3 id="查找字符串的字符位置：（下标从1开始）"><a href="#查找字符串的字符位置：（下标从1开始）" class="headerlink" title="查找字符串的字符位置：（下标从1开始）"></a>查找字符串的字符位置：（下标从1开始）</h3><code>expr index &quot;${string}&quot; ed</code><blockquote>
+<p><strong><em>匹配ed其中最先出现的字母</em></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）"><a href="#定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）" class="headerlink" title="定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）"></a>定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）</h3><ol>
+<li>array_name=(value1 value2 value3 …)</li>
+<li><blockquote>
+<ul>
+<li>array[0]=value1</li>
+<li>array[1]=value2</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h3><ol>
+<li>echo ${array_name} 输出的其实是array的第一个元素</li>
+<li>echo ${array_name[@]} 输出的才是整一个数组 *号跟@一样</li>
+<li>echo ${array_name[0]} 输出第一个元素</li>
+<li>echo ${ #array_name[@]} 计算数组长度(#前的空格是为了越过hexo的错误)</li>
+<li>echo ${ #array_name[1]} 计算数组第一个元素的长度(#前的空格是为了越过hexo的错误)</li>
+</ol>
+<hr>
+<h2 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:&gt;&gt;EOF</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">EOF</span><br><span class="line"><span class="comment"># EOF 可以使用别的字符进行替代</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><ul>
+<li>$0表示执行文件本身 $1 表示第一个命令行参数 …以此类推</li>
+</ul>
+<ol>
+<li>$* and $@ 获取所有的命令行参数（$*单字符形式, $@是多个）</li>
+<li>$# 获取命令行传递的参数个数</li>
+<li>$$ 脚本运行的当前进程id号</li>
+<li>$! 后台运行的最后一个进程ID</li>
+<li>$? 最后命令的退出状态，0表示没错，其他值均有错</li>
+<li>$- 当前所使用的选项</li>
+</ol>
+<hr>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="使用awk-or-expr来实现算数运算"><a href="#使用awk-or-expr来实现算数运算" class="headerlink" title="使用awk or expr来实现算数运算"></a>使用awk or expr来实现算数运算</h3><blockquote>
+<ul>
+<li>example: echo <code>expr $a + $b</code>(<em>需要转义，要\</em>才可以)</li>
+<li>表达式运算符之间需要空格，没有就报错</li>
+<li>条件表达式的空格还要再多两个：[ $a == $b ](多了前后两个空格)</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><ol>
+<li>-eq    检测两个数是否相等，相等返回 true。    <a href="www.baidu.com"> $a -eq $b </a> 返回 false。</li>
+<li>-ne    检测两个数是否不相等，不相等返回 true。    [ $a -ne $b ] 返回 true。</li>
+<li>-gt    检测左边的数是否大于右边的，如果是，则返回 true。    [ $a -gt $b ] 返回 false。</li>
+<li>-lt    检测左边的数是否小于右边的，如果是，则返回 true。    [ $a -lt $b ] 返回 true。</li>
+<li>-ge    检测左边的数是否大于等于右边的，如果是，则返回 true。    [ $a -ge $b ] 返回 false。</li>
+<li>-le    检测左边的数是否小于等于右边的，如果是，则返回 true。    [ $a -le $b ] 返回 true。</li>
+</ol>
+<hr>
+<h3 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h3><ul>
+<li>!    非运算，表达式为 true 则返回 false，否则返回 true。    [ ! false ] 返回 true。</li>
+<li>-o    或运算，有一个表达式为 true 则返回 true。    [ $a -lt 20 -o $b -gt 100 ] 返回 true。</li>
+<li>-a    与运算，两个表达式都为 true 才返回 true。    [ $a -lt 20 -a $b -gt 100 ] 返回 false。</li>
+</ul>
+<hr>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li>&amp;&amp;    逻辑的 AND    [[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</li>
+<li>||    逻辑的 OR    [[ $a -lt 100 || $b -gt 100 ]] 返回 true </li>
+</ul>
+<hr>
+<h3 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="left">描述</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">=</td>
+<td align="left">检测两个字符串是否相等，相等返回 true。</td>
+<td align="left">[ $a = $b ] 返回 false。</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="left">检测两个字符串是否相等，不相等返回 true。</td>
+<td align="left">[ $a != $b ] 返回 true。</td>
+</tr>
+<tr>
+<td align="center">-z</td>
+<td align="left">检测字符串长度是否为0，为0返回 true。</td>
+<td align="left">[ -z $a ] 返回 false。</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="left">检测字符串长度是否不为 0，不为 0 返回 true。</td>
+<td align="left">[ -n “$a” ] 返回 true。</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="left">检测字符串是否为空，不为空返回 true。</td>
+<td align="left">[ $a ] 返回 true。</td>
+</tr>
+</tbody></table>
+<h2 id="read-脚本等待输入"><a href="#read-脚本等待输入" class="headerlink" title="read 脚本等待输入"></a>read 脚本等待输入</h2><ul>
+<li>-p 输入提示文字</li>
+<li>-n 输入字符长度限制(达到6位，自动结束)</li>
+<li>-t 输入限时</li>
+<li>-s 隐藏输入内容<blockquote>
+<ol>
+<li>示例：read -p “you like me? ha?” -n 6 -t 3 -s variable_name</li>
+<li>输入的词组以空格分开，如果词数大于变量数，就会将多出来的词组作为整体给最后一个参数接受</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><ol>
+<li><blockquote>
+<p>重定向输出到某个位置，替换原有文件的所有内容。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>重定向追加到某个位置，在原有文件的末尾添加内容。</p>
+</blockquote>
+</blockquote>
+</li>
+<li>&lt; 重定向输入某个位置文件。</li>
+<li>2&gt; 重定向错误输出。</li>
+<li>2&gt;&gt; 重定向错误追加输出到文件末尾。</li>
+<li>&amp;&gt; 混合输出错误的和正确的都输出。</li>
+</ol>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="if-逻辑分支使用："><a href="#if-逻辑分支使用：" class="headerlink" title="if 逻辑分支使用："></a>if 逻辑分支使用：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> []; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">elif</span> [];<span class="keyword">then</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h3 id="for循环控制"><a href="#for循环控制" class="headerlink" title="for循环控制"></a>for循环控制</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> variable <span class="keyword">in</span> item1 item2</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="while-and-until"><a href="#while-and-until" class="headerlink" title="while and until"></a>while and until</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># while</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'按下 &lt;CTRL-D&gt; 退出'</span></span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">'输入你最喜欢的网站名: '</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> FILM</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"是的！<span class="variable">$FILM</span> 是一个好网站"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># until</span></span><br><span class="line">a=0</span><br><span class="line"></span><br><span class="line">until [ ! <span class="variable">$a</span> -lt 10 ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$a</span></span><br><span class="line">   a=`expr <span class="variable">$a</span> + 1`</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="case"><a href="#case" class="headerlink" title="case"></a>case</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'输入 1 到 4 之间的数字:'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'你输入的数字为:'</span></span><br><span class="line"><span class="built_in">read</span> aNum</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$aNum</span> <span class="keyword">in</span></span><br><span class="line">    1)  <span class="built_in">echo</span> <span class="string">'你选择了 1'</span></span><br><span class="line">    ;;</span><br><span class="line">    2)  <span class="built_in">echo</span> <span class="string">'你选择了 2'</span></span><br><span class="line">    ;;</span><br><span class="line">    3)  <span class="built_in">echo</span> <span class="string">'你选择了 3'</span></span><br><span class="line">    ;;</span><br><span class="line">    4)  <span class="built_in">echo</span> <span class="string">'你选择了 4'</span></span><br><span class="line">    ;;</span><br><span class="line">    *)  <span class="built_in">echo</span> <span class="string">'你没有输入 1 到 4 之间的数字'</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">文件测试运算符</th>
+<th align="left">[ -? ]跟文件有关的参数：</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-e</td>
+<td align="left">判断文件是否存在</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">判断文件是否是可执行文件</td>
+</tr>
+<tr>
+<td align="left">-d</td>
+<td align="left">判断是否为文件夹</td>
+</tr>
+<tr>
+<td align="left">-f</td>
+<td align="left">判断是否为常规的文件</td>
+</tr>
+<tr>
+<td align="left">-r</td>
+<td align="left">read</td>
+</tr>
+<tr>
+<td align="left">-w</td>
+<td align="left">write</td>
+</tr>
+<tr>
+<td align="left">-s</td>
+<td align="left">size 是否为0</td>
+</tr>
+<tr>
+<td align="left">-ot</td>
+<td align="left">older than</td>
+</tr>
+<tr>
+<td align="left">-nt</td>
+<td align="left">newer than</td>
+</tr>
+<tr>
+<td align="left">-l</td>
+<td align="left">link</td>
+</tr>
+<tr>
+<td align="left">-h</td>
+<td align="left">hard link</td>
+</tr>
+</tbody></table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Bash/" data-id="ckcg3485g0000q4519kw3esju" data-title="Bash" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Bash/" data-id="ckcpjxttd0005as51ajn5f4iu" data-title="Bash" class="article-share-link">Share</a>
       
       
       
@@ -172,12 +541,17 @@
 <li>is_del = 99 代表上架，1删除，3隐藏， （0，99表示未删除）</li>
 <li>c_rating 内容分级0表示未设置</li>
 <li>author_name 可以跟jingyu_user的nickname对应上</li>
+<li>up_chapter 得到的是书籍最后一章得章节id,但是也是不靠谱的，自己去chapter表里面找最好</li>
+</ul>
+<h2 id="t-book-statistical-data"><a href="#t-book-statistical-data" class="headerlink" title="t_book-statistical_data"></a>t_book-statistical_data</h2><ul>
+<li>这个表格的数据一本书最多只能有两行数据</li>
+<li>product=0代表dreame的数据，还有一个是product=1代表ficfun的数据</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcg3485q000dq4518ftce502" data-title="StaryMysql" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcpjxtti000eas5104c14565" data-title="StaryMysql" class="article-share-link">Share</a>
       
       
       
@@ -215,7 +589,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="git的几个区"><a href="#git的几个区" class="headerlink" title="git的几个区"></a>git的几个区</h3><blockquote>
+        <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
+<li>git 的命令只能在git仓库目录下运行， git init 除外</li>
+<li>git commit -m ‘有用的描述’ 可以方便查找</li>
+<li></li>
+</ol>
+<p><strong>* 版本控制系统，只能跟踪文本文件的改动 *</strong></p>
+<h3 id="linux上安装git"><a href="#linux上安装git" class="headerlink" title="linux上安装git"></a>linux上安装git</h3><p>sudo apt-get install git<br>sudo apt-get install git-core(老一点的linux版本)</p>
+<h3 id="git的几个区"><a href="#git的几个区" class="headerlink" title="git的几个区"></a>git的几个区</h3><blockquote>
 <ul>
 <li>workspace：工作区</li>
 <li>Index/Stage: 暂存区</li>
@@ -234,11 +615,41 @@
 <h3 id="上线时间跟当前不一致，创建新的分支"><a href="#上线时间跟当前不一致，创建新的分支" class="headerlink" title="上线时间跟当前不一致，创建新的分支"></a>上线时间跟当前不一致，创建新的分支</h3><p>git fetch 拉取最新的信息<br>git checkout origin/master 切换分支<br>git checkout -f来撤销自己的修改<br>git checkout -b v1.1 = git branch v1.1 + git checkout v1.1(在切换后的分支创建分支)</p>
 <p>查看本地分支对应关联的远端分支<br>git branch -vv</p>
 <p>see<a href="http://static.runoob.com/images/runoob-logo.png" target="_blank" rel="noopener">runnob</a></p>
+<hr>
+<h3 id="git常规使用"><a href="#git常规使用" class="headerlink" title="git常规使用"></a>git常规使用</h3><p>git init（初始化仓库）<br>git add <file> 示例：git add file1, file2…<br>git commit -m <message>  示例： git commit -m ‘add readme.md file’<br>git diff file   示例： git diff README.md (可以查看本地仓库跟远程仓库中该文件的diff)<br>git log 查看提交的日志 git log –pretty=oneline （一个提交变成一行输出）</p>
+<h3 id="git常见问题"><a href="#git常见问题" class="headerlink" title="git常见问题"></a>git常见问题</h3><p>1、.gitignore文件不生效（如果先将项目添加的git仓库，后添加忽略文件，不清理git的缓存，忽略文件是不会生效的。）</p>
+<p>git rm -r –cached .<br>git add .<br>git commit -m ‘update .gitignore’</p>
+<p>最后更新.gitignore文件再次提交</p>
+<p>2、不同分支合并或拷贝单个文件</p>
+<p>另外如果只想将feature分支的某个文件f.txt合并到master分支上。<br>1: git checkout master<br>2: git checkout –patch feature f.txt<br>第一个命令： 切换到master分支；<br>第二个命令：合并feature分支上f文件到master分支上，将feature分支上 f 文件追加补丁到master分支上 f文件。你可以接受或者拒绝补丁内容。即提示输y或者n</p>
+<p>如果只是简单的将feature分支的文件f.txt copy到master分支上；<br>git checkout master<br>git checkout feature /p/d/f.txt</p>
+<p>解释：<br>y - 存储这个hunk<br>n - 不存储这个hunk<br>q - 离开，不存储这个hunk和其他hunk<br>a - 存储这个hunk和这个文件后面的hunk<br>d - 不存储这个hunk和这个文件后面的hunk<br>g - 选择一个hunk<br>/ - 通过正则查找hunk<br>j - 不确定是否存储这个hunk，看下一个不确定的hunk<br>J - 不确定是否存储这个hunk，看下一个hunk<br>k - 不确定是否存储这个hunk，看上一个不确定的hunk<br>K -不确定是否存储这个hunk，看上一个hunk<br>s - 把当前的hunk分成更小的hunks<br>e - 手动编辑当前的hunk<br>? - 输出帮助信息</p>
+<p> 3、git比较两个分支的文件的差异</p>
+<p>git diff branch1 branch2 –stat   //显示出所有有差异的文件列表<br>git diff branch1 branch2 文件名(带路径)   //显示指定文件的详细差异<br>git diff branch1 branch2                   //显示出所有有差异的文件的详细差异</p>
+<p>4、撤销修改<br>git checkout – “file_name” 将代码回退<br>如果已add到暂存区 就回退到刚添加到暂存区的版本<br>如果没add到暂存区 就回退到版本库的版本<br>5、删除文件<br>一般是从文件管理器将文件删除<br>git status查看哪些文件被删除<br>如果确实要删除该文件 就使用 git rm “file_name” 将该文件从版本库中删除<br>如果是删错了 可以使用 git checkout – “file_name” 将误删文件恢复到最新版本</p>
+<p>6、单个文件历史记录<br>git log –oneline .a.txt<br>7、单个文件回退到历史版本<br>git reset 120a893 a.txt</p>
+<p>8、查看单文件工作区和版本库里面最新版本的区别（上下键查看，q是退出命令）<br>git diff HEAD – readme.txt</p>
+<p>9、在工作中，遇到一个问题，在git merge后，发生冲突，而当冲突较多的时候，逐个检查冲突，有的时候会遗漏一些文件，导致带有冲突标记的文件上传到了Git服务器上。<br>使用以下命令可以快速检查是否还存在有带有冲突标记的文件。<br>git diff –check</p>
+<p>10、删除本地分支</p>
+<p>git branch -d 分支名</p>
+<p>11、删除远程分支</p>
+<p>git push origin –delete 远程分支名称</p>
+<p>取消远程关联<br>git remote remove origin<br>从命令行创建一个新的仓库</p>
+<ul>
+<li>touch README.md</li>
+<li>git init</li>
+<li>git add README.md</li>
+<li>git commit -m “first commit”</li>
+<li>git remote add origin <a href="http://10.0.0.63/SH/test_lib.git" target="_blank" rel="noopener">http://10.0.0.63/SH/test_lib.git</a></li>
+<li>git push -u origin master<br>从命令行推送已经创建的仓库</li>
+<li>git remote add origin <a href="http://10.0.0.63/SH/test_lib.git" target="_blank" rel="noopener">http://10.0.0.63/SH/test_lib.git</a></li>
+<li>git push -u origin master</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/" data-id="ckcg0etz40000jw51fh6o3zrq" data-title="Git" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Git/" data-id="ckcpjxtta0002as517a2da8d5" data-title="Git" class="article-share-link">Share</a>
       
       
       
@@ -284,7 +695,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/GoMain/" data-id="ckcfwo9ji0001dk519dqbbay7" data-title="GoMain" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/GoMain/" data-id="ckcpjxttj000gas51cgadf2xt" data-title="GoMain" class="article-share-link">Share</a>
       
       
       
@@ -326,7 +737,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/RobHouse/" data-id="ckcfwo9jf0000dk51bsgvf47h" data-title="RobHouse" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/RobHouse/" data-id="ckcpjxttm000nas519u8ad6sc" data-title="RobHouse" class="article-share-link">Share</a>
       
       
       
@@ -368,7 +779,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/TwoSum/" data-id="ckcfwo9jk0004dk510s5bgpcf" data-title="TwoSum" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/06/TwoSum/" data-id="ckcpjxttq000pas517pod02ug" data-title="TwoSum" class="article-share-link">Share</a>
       
       
       
@@ -469,210 +880,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/Python/" data-id="ckcg3485p0009q451btp7fi6l" data-title="python" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/02/Mysql/" class="article-date">
-  <time class="dt-published" datetime="2020-07-02T06:35:22.000Z" itemprop="datePublished">2020-07-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/02/Mysql/">mysql</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="数据库的常用索引算法："><a href="#数据库的常用索引算法：" class="headerlink" title="数据库的常用索引算法："></a>数据库的常用索引算法：</h2><h3 id="BTree索引：（平衡多路查找树）"><a href="#BTree索引：（平衡多路查找树）" class="headerlink" title="BTree索引：（平衡多路查找树）"></a>BTree索引：（平衡多路查找树）</h3><p>  每个节点关键字增加，使得树的高度变小，减少数据查找次数以及复杂度，而且在应用数据库的时候充分利用了磁盘块的原理，每次IO数据读取，将一个块的数据一次性读出。B树本身的非叶子节点存有关键字以及数据地址，如果是经常访问的数据离根节点很近，B树会比B+树数据检索快。B+树的非叶子结点关键字更多，树的高度更小，查询数据更快，更加接近二分查找的速度。并且所有数据地址都是存在叶子结点，所以查询的速度更稳定。B+树所有的叶子节点数据构成了一个有序链表，在查询大小区间的数据时候更方便，数据紧密性很高，缓存的命中率也会比B树高。全表遍历B+树更有利，只对叶子节点进行遍历，并且左边结尾数据保存右边结点的开始数据指针。MySql MyISAM引擎使用BTree索引时，索引文件跟数据文件时分开的，结点存储的时数据地址。InnoDB的Btree索引叶子结点存储的是数据，索引文件就是数据文件。</p>
-<h3 id="Hash索引："><a href="#Hash索引：" class="headerlink" title="Hash索引："></a>Hash索引：</h3><p>  哈希是通过哈希函数来计算出地址，在发生哈希冲突的时候常用策略是链地址法，在发生冲突的地方作为链表连接上。所以结果哈希算法计算出来的值，并不能保证原数据的顺序，无法加速任何排序操作，无法适用于范围查询，只用于等值比较。使用哈希索引进行查询的理论上的时间复杂度是O(1)常数级别，但是计算哈希值的时候需要全表扫描。（建立哈希表）在选择性比较差的列建立哈希索引会浪费其特性，因为重复的hash值会造成链表很长，大量记录指针信息存于同一个Hash值相关联，造成整体性能底下。</p>
-<h3 id="建立索引的原则："><a href="#建立索引的原则：" class="headerlink" title="建立索引的原则："></a>建立索引的原则：</h3><ol>
-<li>利用BTree索引的最左匹配，Mysql会一直向右查找直到遇到范围操作（&gt;，&lt;，like、between）就停止匹配，所以范围操作可以放在后面。</li>
-<li>索引的维护需要成本，不可滥用。</li>
-<li>尽量扩展索引而不是新建。</li>
-<li>最适合的索引的列是出现在where子句中的列或连接子句中指定的列（使用索引进行筛选）。</li>
-<li>模糊查询不可%开头，匹配所有，性能很差，使用常量开头才可以使用到索引。</li>
-</ol>
-<h2 id="索引使用的数据结构跟哈希表使用的数据结构；"><a href="#索引使用的数据结构跟哈希表使用的数据结构；" class="headerlink" title="索引使用的数据结构跟哈希表使用的数据结构；"></a>索引使用的数据结构跟哈希表使用的数据结构；</h2><h3 id="解决哈希冲突："><a href="#解决哈希冲突：" class="headerlink" title="解决哈希冲突："></a>解决哈希冲突：</h3><p>1.开发定址法</p>
-<p>如果遇到冲突的时候怎么办呢？就找hash表剩下空余的空间，找到空余的空间然后插入。就像你去商店买东西，发现东西卖光了，怎么办呢？找下一家有东西卖的商家买呗。</p>
-<p>2.链地址法<br>在冲突的地方创建新的结点形成链表</p>
-<p>where条件在使用索引的时候不一定会用到索引的~~有些条件会产生全表扫描；怎样避免全盘扫描；<br>表格数据很少，使用全表检索会比使用索引检索更快。一般当表格总数据小于10行并且数据行的长度非常小的时候会使用全表检索。<br>在ON或者WHERE中，没有使用索引列作为查询条件；<br>使用了索引列与一个常量进行比较，但是mysql发现该索引列覆盖的数据太大，反而全表检索更快（一般当索引列覆盖的数据大于全表数据的30%时，会触发mysql使用全表检索）。<br>使用了一个覆盖了大部分数据的索引列与另外表的列进行关联查询，此时mysql会使用全表检索；</p>
-<h2 id="避免："><a href="#避免：" class="headerlink" title="避免："></a>避免：</h2><p>使用FORCE INDEX告诉Mysql使用全表检索会很慢，而使用索引会很快；<br>SELECT * FROM t1, t2 FORCE INDEX (index_for_column)<br>WHERE t1.col_name=t2.col_name;<br>使用ANALYZE TABLE  <tbl_name> 更新索引的分布；<br>设置max_seeks_for_key=1000告诉MYSQL没有索引会覆盖超过1000条数据；</p>
-<hr>
-<h2 id="InnoDB支持的四种事务隔离级别："><a href="#InnoDB支持的四种事务隔离级别：" class="headerlink" title="InnoDB支持的四种事务隔离级别："></a>InnoDB支持的四种事务隔离级别：</h2><ul>
-<li>read uncommited:读到未提交事务；</li>
-<li>read commited: 脏读，不可以重复读；</li>
-<li>repeatable read:可重读；</li>
-<li>serializable:串行事务；</li>
-</ul>
-<h3 id="Enum"><a href="#Enum" class="headerlink" title="Enum"></a>Enum</h3><p>字符串对象，用于指定一组预定义的值；<br>ENUM(‘Small’,’Medium’,’Large’);</p>
-<h3 id="char跟varchar"><a href="#char跟varchar" class="headerlink" title="char跟varchar"></a>char跟varchar</h3><p>char的列长度固定为声明时的长度，范围为1 - 255，在存储的时候如果长度不足声明的时候的长度，就会在后面补上空格；<br>检索char值需要删除尾随的空格；</p>
-<h3 id="列的字符串类型可以是"><a href="#列的字符串类型可以是" class="headerlink" title="列的字符串类型可以是"></a>列的字符串类型可以是</h3><p>set blob char varchar text enum;</p>
-<h3 id="存储引擎（表类型）"><a href="#存储引擎（表类型）" class="headerlink" title="存储引擎（表类型）"></a>存储引擎（表类型）</h3><p>技术涉及：storage mechanism；存储构造<br>                Locking Level； 锁级别<br>                Indexing; 为…编索引<br>                Capabilities and functions;  能力和功能</p>
-<p>TIMESTAMP<br>CURRENT_TIMESTAMP<br>当执行insert操作的时候，当TIMESTAMP字段有没有set值，就会插入sysdate()；</p>
-<p>ON UPDATE CURRENT_TIMESTAMP<br>当执行update操作的时候，如果有字段修改了，就会更新当前的时间；</p>
-<p>逻辑上我记忆：CURRENT_TIMESTAMP = CURRENT_DATE + CURRENT_TIME;<br>                       now() = sysdate() = CURRENT_TIMESTAMP; </p>
-<p>主键（primary）和候选键（candidate）<br>使用primary key(字段1, 字段2, …)的语句进行设置，主键可以多个字段或者一个字段；<br>主键也是候选键，主键是表格里面唯一的 ，并且可以保证列里的值的不重复；<br>外键（foreign）：表1的外键是表2的主键，并且不是表1的主键；<br>候选键：能够唯一标识表跟行中列。（候选关键字或则候选码）</p>
-<p>Blob 跟 text<br>Blob是二进制的对象：tinyBlob blob mediumBlob longblob 四种可变长度的类型；<br>Text是一种不区分的大小写的一种Blob,对应也是四种;两者的区别在于排序跟比较的时候区分大小写；</p>
-<h3 id="三范式"><a href="#三范式" class="headerlink" title="三范式"></a>三范式</h3><p>表的每一个字段都是不可分割的；<br>表中的非主属性只依赖于主键；<br>非主属性不依赖关键字的传递函数（一个数据库的表不包含其它表的非主关键字的字段）</p>
-<h3 id="六个触发器（trigger）"><a href="#六个触发器（trigger）" class="headerlink" title="六个触发器（trigger）"></a>六个触发器（trigger）</h3><p>before after +(insert update delete)</p>
-<h3 id="通用SQL函数"><a href="#通用SQL函数" class="headerlink" title="通用SQL函数"></a>通用SQL函数</h3><ul>
-<li>abs(num)绝对值；</li>
-<li>floor(num)向下取整；</li>
-<li>ceil(num)向上取整；</li>
-</ul>
-<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><p>min(字段) max(字段) avg(字段) count(字段)计数 sum(字段)求和；</p>
-<h3 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h3><ul>
-<li>reverse(str)倒序输出；</li>
-<li>left(str, length)输出前length个字符；</li>
-<li>right(…)输出后length个字符；</li>
-<li>substring(str， index， length)返回从index开始的length个字符，index从1开始；</li>
-<li>upper(),ucase()将str转为大写；</li>
-<li>lower(),lcase()将str转为小写；</li>
-<li>insert(str1, index, length, str2)index从1开始，用str2替换掉str1从index开始，长度为length的字符串；</li>
-</ul>
-<hr>
-<h3 id="多表连接"><a href="#多表连接" class="headerlink" title="多表连接"></a>多表连接</h3><p>and 跟 or一起使用要小心哦。使用（）来使得and 跟or正常运行。而且逻辑也更加明显<br>多表连接查询的时候，如果是左右连接的话，筛选条件的使用要很谨慎小心使用到可能为Null的字段。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/02/Mysql/" data-id="ckcg3485l0002q4518zzf64fp" data-title="mysql" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Golang" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/01/Golang/" class="article-date">
-  <time class="dt-published" datetime="2020-07-01T10:46:06.000Z" itemprop="datePublished">2020-07-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/yangxiaotang.github.io/categories/golang/">golang</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/01/Golang/">golang</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Go-语言最主要的特性："><a href="#Go-语言最主要的特性：" class="headerlink" title="Go 语言最主要的特性："></a>Go 语言最主要的特性：</h1><ol>
-<li>自动垃圾回收</li>
-<li>更丰富的内置类型</li>
-<li>函数多返回值</li>
-<li>错误处理</li>
-<li>匿名函数和闭包</li>
-<li>类型和接口</li>
-<li>并发编程</li>
-<li>反射</li>
-<li>语言交互性<h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2></li>
-</ol>
-<ul>
-<li>var number int = 1;</li>
-<li>如果只是进行声明，初始化会设置默认值；</li>
-</ul>
-<ul>
-<li>数值类型（包括complex64/128）为 0</li>
-<li>布尔类型为 false</li>
-<li>字符串为 “”（空字符串）</li>
-<li>以下几种类型为 nil：</li>
-</ul>
-<p>map</p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li>变量的定义使用 var varName type</li>
-<li>局部变量可以这样：    varName ：= value</li>
-<li>如果提供了初始化的值，可以省略变量的类型</li>
-<li>定义变量的时候，会给一个初始化的值</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Golang/" data-id="ckcg3485k0001q4511dep3j81" data-title="golang" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Leetcode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/01/Leetcode/" class="article-date">
-  <time class="dt-published" datetime="2020-07-01T10:34:32.000Z" itemprop="datePublished">2020-07-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/yangxiaotang.github.io/2020/07/01/Leetcode/">leetcode</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/Leetcode/" data-id="ckcg3485n0005q4514cao5hgc" data-title="leetcode" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/03/Python/" data-id="ckcpjxttk000jas518yeb414z" data-title="python" class="article-share-link">Share</a>
       
       
       
@@ -699,7 +907,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -727,23 +935,23 @@
       <ul>
         
           <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/README/">README</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/">ClimbStair</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/14/use-bert/">use_bert</a>
+          </li>
+        
+          <li>
             <a href="/yangxiaotang.github.io/2020/07/10/Bash/">Bash</a>
           </li>
         
           <li>
             <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/">StaryMysql</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/10/Git/">Git</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/GoMain/">GoMain</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/RobHouse/">RobHouse</a>
           </li>
         
       </ul>

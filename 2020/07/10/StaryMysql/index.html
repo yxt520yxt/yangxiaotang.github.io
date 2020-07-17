@@ -14,7 +14,7 @@
 <meta property="og:description" content="书籍的金券金豆等统计数据 t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推   t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count  period 为3的数据一般是下月月初计算出来的。      t_device 设备表  os_type 0 为安卓， 1为ios   jingyu_ca">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-10T09:22:30.000Z">
-<meta property="article:modified_time" content="2020-07-10T10:39:39.812Z">
+<meta property="article:modified_time" content="2020-07-16T02:32:04.697Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -128,12 +128,17 @@
 <li>is_del = 99 代表上架，1删除，3隐藏， （0，99表示未删除）</li>
 <li>c_rating 内容分级0表示未设置</li>
 <li>author_name 可以跟jingyu_user的nickname对应上</li>
+<li>up_chapter 得到的是书籍最后一章得章节id,但是也是不靠谱的，自己去chapter表里面找最好</li>
+</ul>
+<h2 id="t-book-statistical-data"><a href="#t-book-statistical-data" class="headerlink" title="t_book-statistical_data"></a>t_book-statistical_data</h2><ul>
+<li>这个表格的数据一本书最多只能有两行数据</li>
+<li>product=0代表dreame的数据，还有一个是product=1代表ficfun的数据</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcg3485q000dq4518ftce502" data-title="StaryMysql" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcpjxtti000eas5104c14565" data-title="StaryMysql" class="article-share-link">Share</a>
       
       
       
@@ -172,7 +177,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -200,23 +205,23 @@
       <ul>
         
           <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/README/">README</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/">ClimbStair</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/14/use-bert/">use_bert</a>
+          </li>
+        
+          <li>
             <a href="/yangxiaotang.github.io/2020/07/10/Bash/">Bash</a>
           </li>
         
           <li>
             <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/">StaryMysql</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/10/Git/">Git</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/GoMain/">GoMain</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/RobHouse/">RobHouse</a>
           </li>
         
       </ul>

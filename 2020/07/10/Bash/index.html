@@ -6,15 +6,15 @@
   
   <title>Bash | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="shell脚本的第一行使用#！&#x2F;bin&#x2F;bash 指定解释器if 逻辑分支使用：if []; thencommandelif [];thencommandelsecommandfi if [ -? ]跟文件有关的参数：-e 判断文件是否存在-x 判断文件是否是可执行文件-d 判断是否为文件夹-f 判断是否为常规的文件-r read-w write-s size 是否为0-ot older than">
+  <meta name="description" content="shell脚本的第一行使用#！&#x2F;bin&#x2F;bash 指定解释器运行shell脚本 作为可执行程序运行，需要先赋予脚本可执行权限 chmod +x shell_file.&#x2F;yxt.sh   作为解释器参数 &#x2F;bin&#x2F;bash&#x2F; yxt.sh    shell变量 变量名跟&#x3D;不能有空格 定义变量的时候，不需要$ 不可以使用标点符号，不能以数字开头，并且不能使用bash的关键字 可以使用下划线 变量可以重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bash">
 <meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Bash/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="shell脚本的第一行使用#！&#x2F;bin&#x2F;bash 指定解释器if 逻辑分支使用：if []; thencommandelif [];thencommandelsecommandfi if [ -? ]跟文件有关的参数：-e 判断文件是否存在-x 判断文件是否是可执行文件-d 判断是否为文件夹-f 判断是否为常规的文件-r read-w write-s size 是否为0-ot older than">
+<meta property="og:description" content="shell脚本的第一行使用#！&#x2F;bin&#x2F;bash 指定解释器运行shell脚本 作为可执行程序运行，需要先赋予脚本可执行权限 chmod +x shell_file.&#x2F;yxt.sh   作为解释器参数 &#x2F;bin&#x2F;bash&#x2F; yxt.sh    shell变量 变量名跟&#x3D;不能有空格 定义变量的时候，不需要$ 不可以使用标点符号，不能以数字开头，并且不能使用bash的关键字 可以使用下划线 变量可以重">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-10T10:19:43.000Z">
-<meta property="article:modified_time" content="2020-07-10T10:20:09.882Z">
+<meta property="article:modified_time" content="2020-07-16T07:52:10.722Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -102,13 +102,240 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>shell脚本的第一行使用#！/bin/bash 指定解释器<br>if 逻辑分支使用：<br>if []; then<br>command<br>elif [];then<br>command<br>else<br>command<br>fi</p>
-<p>if [ -? ]跟文件有关的参数：<br>-e 判断文件是否存在<br>-x 判断文件是否是可执行文件<br>-d 判断是否为文件夹<br>-f 判断是否为常规的文件<br>-r read<br>-w write<br>-s size 是否为0<br>-ot older than<br>-nt newer than<br>-l  link<br>-h hard link</p>
+        <h2 id="shell脚本的第一行使用-！-bin-bash-指定解释器"><a href="#shell脚本的第一行使用-！-bin-bash-指定解释器" class="headerlink" title="shell脚本的第一行使用#！/bin/bash 指定解释器"></a>shell脚本的第一行使用#！/bin/bash 指定解释器</h2><h3 id="运行shell脚本"><a href="#运行shell脚本" class="headerlink" title="运行shell脚本"></a>运行shell脚本</h3><ul>
+<li>作为可执行程序运行，需要先赋予脚本可执行权限<blockquote>
+<p>chmod +x shell_file<br>./yxt.sh</p>
+</blockquote>
+</li>
+<li>作为解释器参数<blockquote>
+<p>/bin/bash/ yxt.sh</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量"></a>shell变量</h2><ul>
+<li>变量名跟=不能有空格</li>
+<li>定义变量的时候，不需要$</li>
+<li>不可以使用标点符号，不能以数字开头，并且不能使用bash的关键字</li>
+<li>可以使用下划线</li>
+<li>变量可以重新定义，但是不可以重新赋值</li>
+<li>readonly variable 变量设置为只读变量，不可重新定义    </li>
+<li>unset 删除变量，不可以删除只读变量</li>
+<li>没有强制使用{}包裹变量，规范最好就写上</li>
+</ul>
+<hr>
+<blockquote>
+<p>三种变量</p>
+<blockquote>
+<ol>
+<li>局部变量 </li>
+<li>环境变量</li>
+<li>shell变量</li>
+</ol>
+</blockquote>
+</blockquote>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="定义字符串的内容"><a href="#定义字符串的内容" class="headerlink" title="定义字符串的内容"></a>定义字符串的内容</h3><ol>
+<li>单引号  </li>
+<li>双引号  </li>
+<li>或者两个都不要  <blockquote>
+<p>双引号可以做到转义以及内嵌变量，单引号不行</p>
+</blockquote>
+<h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3></li>
+</ol>
+<ul>
+<li>使用双引号基本不需要拼接，变量直接写进去就行了</li>
+<li>单引号的拼接,也不需要+，直接拼起来就行<h3 id="字符串的长度获取"><a href="#字符串的长度获取" class="headerlink" title="字符串的长度获取"></a>字符串的长度获取</h3>${ #variable_name}(#前的空格是为了越过hexo的错误)<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3>${variable_name:start_index:length}<h3 id="查找字符串的字符位置：（下标从1开始）"><a href="#查找字符串的字符位置：（下标从1开始）" class="headerlink" title="查找字符串的字符位置：（下标从1开始）"></a>查找字符串的字符位置：（下标从1开始）</h3><code>expr index &quot;${string}&quot; ed</code><blockquote>
+<p><strong><em>匹配ed其中最先出现的字母</em></strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）"><a href="#定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）" class="headerlink" title="定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）"></a>定义（下标0开始，可以使用不连续的下标，并且下标的范围没有限制）</h3><ol>
+<li>array_name=(value1 value2 value3 …)</li>
+<li><blockquote>
+<ul>
+<li>array[0]=value1</li>
+<li>array[1]=value2</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h3 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h3><ol>
+<li>echo ${array_name} 输出的其实是array的第一个元素</li>
+<li>echo ${array_name[@]} 输出的才是整一个数组 *号跟@一样</li>
+<li>echo ${array_name[0]} 输出第一个元素</li>
+<li>echo ${ #array_name[@]} 计算数组长度(#前的空格是为了越过hexo的错误)</li>
+<li>echo ${ #array_name[1]} 计算数组第一个元素的长度(#前的空格是为了越过hexo的错误)</li>
+</ol>
+<hr>
+<h2 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:&gt;&gt;EOF</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">EOF</span><br><span class="line"><span class="comment"># EOF 可以使用别的字符进行替代</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><ul>
+<li>$0表示执行文件本身 $1 表示第一个命令行参数 …以此类推</li>
+</ul>
+<ol>
+<li>$* and $@ 获取所有的命令行参数（$*单字符形式, $@是多个）</li>
+<li>$# 获取命令行传递的参数个数</li>
+<li>$$ 脚本运行的当前进程id号</li>
+<li>$! 后台运行的最后一个进程ID</li>
+<li>$? 最后命令的退出状态，0表示没错，其他值均有错</li>
+<li>$- 当前所使用的选项</li>
+</ol>
+<hr>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="使用awk-or-expr来实现算数运算"><a href="#使用awk-or-expr来实现算数运算" class="headerlink" title="使用awk or expr来实现算数运算"></a>使用awk or expr来实现算数运算</h3><blockquote>
+<ul>
+<li>example: echo <code>expr $a + $b</code>(<em>需要转义，要\</em>才可以)</li>
+<li>表达式运算符之间需要空格，没有就报错</li>
+<li>条件表达式的空格还要再多两个：[ $a == $b ](多了前后两个空格)</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><ol>
+<li>-eq    检测两个数是否相等，相等返回 true。    <a href="www.baidu.com"> $a -eq $b </a> 返回 false。</li>
+<li>-ne    检测两个数是否不相等，不相等返回 true。    [ $a -ne $b ] 返回 true。</li>
+<li>-gt    检测左边的数是否大于右边的，如果是，则返回 true。    [ $a -gt $b ] 返回 false。</li>
+<li>-lt    检测左边的数是否小于右边的，如果是，则返回 true。    [ $a -lt $b ] 返回 true。</li>
+<li>-ge    检测左边的数是否大于等于右边的，如果是，则返回 true。    [ $a -ge $b ] 返回 false。</li>
+<li>-le    检测左边的数是否小于等于右边的，如果是，则返回 true。    [ $a -le $b ] 返回 true。</li>
+</ol>
+<hr>
+<h3 id="布尔运算符"><a href="#布尔运算符" class="headerlink" title="布尔运算符"></a>布尔运算符</h3><ul>
+<li>!    非运算，表达式为 true 则返回 false，否则返回 true。    [ ! false ] 返回 true。</li>
+<li>-o    或运算，有一个表达式为 true 则返回 true。    [ $a -lt 20 -o $b -gt 100 ] 返回 true。</li>
+<li>-a    与运算，两个表达式都为 true 才返回 true。    [ $a -lt 20 -a $b -gt 100 ] 返回 false。</li>
+</ul>
+<hr>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li>&amp;&amp;    逻辑的 AND    [[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</li>
+<li>||    逻辑的 OR    [[ $a -lt 100 || $b -gt 100 ]] 返回 true </li>
+</ul>
+<hr>
+<h3 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="left">描述</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">=</td>
+<td align="left">检测两个字符串是否相等，相等返回 true。</td>
+<td align="left">[ $a = $b ] 返回 false。</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="left">检测两个字符串是否相等，不相等返回 true。</td>
+<td align="left">[ $a != $b ] 返回 true。</td>
+</tr>
+<tr>
+<td align="center">-z</td>
+<td align="left">检测字符串长度是否为0，为0返回 true。</td>
+<td align="left">[ -z $a ] 返回 false。</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="left">检测字符串长度是否不为 0，不为 0 返回 true。</td>
+<td align="left">[ -n “$a” ] 返回 true。</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="left">检测字符串是否为空，不为空返回 true。</td>
+<td align="left">[ $a ] 返回 true。</td>
+</tr>
+</tbody></table>
+<h2 id="read-脚本等待输入"><a href="#read-脚本等待输入" class="headerlink" title="read 脚本等待输入"></a>read 脚本等待输入</h2><ul>
+<li>-p 输入提示文字</li>
+<li>-n 输入字符长度限制(达到6位，自动结束)</li>
+<li>-t 输入限时</li>
+<li>-s 隐藏输入内容<blockquote>
+<ol>
+<li>示例：read -p “you like me? ha?” -n 6 -t 3 -s variable_name</li>
+<li>输入的词组以空格分开，如果词数大于变量数，就会将多出来的词组作为整体给最后一个参数接受</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><ol>
+<li><blockquote>
+<p>重定向输出到某个位置，替换原有文件的所有内容。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>重定向追加到某个位置，在原有文件的末尾添加内容。</p>
+</blockquote>
+</blockquote>
+</li>
+<li>&lt; 重定向输入某个位置文件。</li>
+<li>2&gt; 重定向错误输出。</li>
+<li>2&gt;&gt; 重定向错误追加输出到文件末尾。</li>
+<li>&amp;&gt; 混合输出错误的和正确的都输出。</li>
+</ol>
+<h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h3 id="if-逻辑分支使用："><a href="#if-逻辑分支使用：" class="headerlink" title="if 逻辑分支使用："></a>if 逻辑分支使用：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> []; <span class="keyword">then</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">elif</span> [];<span class="keyword">then</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h3 id="for循环控制"><a href="#for循环控制" class="headerlink" title="for循环控制"></a>for循环控制</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> variable <span class="keyword">in</span> item1 item2</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="built_in">command</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="while-and-until"><a href="#while-and-until" class="headerlink" title="while and until"></a>while and until</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># while</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'按下 &lt;CTRL-D&gt; 退出'</span></span><br><span class="line"><span class="built_in">echo</span> -n <span class="string">'输入你最喜欢的网站名: '</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> FILM</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"是的！<span class="variable">$FILM</span> 是一个好网站"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># until</span></span><br><span class="line">a=0</span><br><span class="line"></span><br><span class="line">until [ ! <span class="variable">$a</span> -lt 10 ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="variable">$a</span></span><br><span class="line">   a=`expr <span class="variable">$a</span> + 1`</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="case"><a href="#case" class="headerlink" title="case"></a>case</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'输入 1 到 4 之间的数字:'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'你输入的数字为:'</span></span><br><span class="line"><span class="built_in">read</span> aNum</span><br><span class="line"><span class="keyword">case</span> <span class="variable">$aNum</span> <span class="keyword">in</span></span><br><span class="line">    1)  <span class="built_in">echo</span> <span class="string">'你选择了 1'</span></span><br><span class="line">    ;;</span><br><span class="line">    2)  <span class="built_in">echo</span> <span class="string">'你选择了 2'</span></span><br><span class="line">    ;;</span><br><span class="line">    3)  <span class="built_in">echo</span> <span class="string">'你选择了 3'</span></span><br><span class="line">    ;;</span><br><span class="line">    4)  <span class="built_in">echo</span> <span class="string">'你选择了 4'</span></span><br><span class="line">    ;;</span><br><span class="line">    *)  <span class="built_in">echo</span> <span class="string">'你没有输入 1 到 4 之间的数字'</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">文件测试运算符</th>
+<th align="left">[ -? ]跟文件有关的参数：</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-e</td>
+<td align="left">判断文件是否存在</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">判断文件是否是可执行文件</td>
+</tr>
+<tr>
+<td align="left">-d</td>
+<td align="left">判断是否为文件夹</td>
+</tr>
+<tr>
+<td align="left">-f</td>
+<td align="left">判断是否为常规的文件</td>
+</tr>
+<tr>
+<td align="left">-r</td>
+<td align="left">read</td>
+</tr>
+<tr>
+<td align="left">-w</td>
+<td align="left">write</td>
+</tr>
+<tr>
+<td align="left">-s</td>
+<td align="left">size 是否为0</td>
+</tr>
+<tr>
+<td align="left">-ot</td>
+<td align="left">older than</td>
+</tr>
+<tr>
+<td align="left">-nt</td>
+<td align="left">newer than</td>
+</tr>
+<tr>
+<td align="left">-l</td>
+<td align="left">link</td>
+</tr>
+<tr>
+<td align="left">-h</td>
+<td align="left">hard link</td>
+</tr>
+</tbody></table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Bash/" data-id="ckcg3485g0000q4519kw3esju" data-title="Bash" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/Bash/" data-id="ckcpjxttd0005as51ajn5f4iu" data-title="Bash" class="article-share-link">Share</a>
       
       
       
@@ -117,6 +344,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/yangxiaotang.github.io/2020/07/14/use-bert/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          use_bert
+        
+      </div>
+    </a>
   
   
     <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/" id="article-nav-older" class="article-nav-link-wrap">
@@ -138,7 +374,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/golang/">golang</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/leetcode/">leetcode</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/mysql/">mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/yangxiaotang.github.io/categories/python/">python</a></li></ul>
     </div>
   </div>
 
@@ -166,23 +402,23 @@
       <ul>
         
           <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/README/">README</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/">ClimbStair</a>
+          </li>
+        
+          <li>
+            <a href="/yangxiaotang.github.io/2020/07/14/use-bert/">use_bert</a>
+          </li>
+        
+          <li>
             <a href="/yangxiaotang.github.io/2020/07/10/Bash/">Bash</a>
           </li>
         
           <li>
             <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/">StaryMysql</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/10/Git/">Git</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/GoMain/">GoMain</a>
-          </li>
-        
-          <li>
-            <a href="/yangxiaotang.github.io/2020/07/06/RobHouse/">RobHouse</a>
           </li>
         
       </ul>

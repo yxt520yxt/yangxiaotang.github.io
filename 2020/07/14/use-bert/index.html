@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | YangXiaoTang&#39;Blog</title>
+  <title>use_bert | YangXiaoTang&#39;Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Technology make world more beautiful!So, let us roll.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YangXiaoTang&#39;Blog">
-<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/archives/page/2/index.html">
+  <meta name="description" content="使用bert_serving之前需要先安装tensorflowpip install tensorflow&#x3D;&#x3D;1.12(需要1.10及以上的版本)pip install bert-serving-server&#x3D;&#x3D;1.9.1pip install bert-serving-client&#x3D;&#x3D;1.9.1  下载bert模型并解压https:&#x2F;&#x2F;storage.googleapis.com&#x2F;bert_mo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="use_bert">
+<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/14/use-bert/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
-<meta property="og:description" content="Technology make world more beautiful!So, let us roll.">
+<meta property="og:description" content="使用bert_serving之前需要先安装tensorflowpip install tensorflow&#x3D;&#x3D;1.12(需要1.10及以上的版本)pip install bert-serving-server&#x3D;&#x3D;1.9.1pip install bert-serving-client&#x3D;&#x3D;1.9.1  下载bert模型并解压https:&#x2F;&#x2F;storage.googleapis.com&#x2F;bert_mo">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-14T03:09:49.000Z">
+<meta property="article:modified_time" content="2020-07-14T10:11:48.358Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -74,140 +76,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/yangxiaotang.github.io/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/07/02/Mysql/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-02T06:35:22.000Z" itemprop="datePublished">Jul 2</time>
+        <section id="main"><article id="post-use-bert" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/yangxiaotang.github.io/2020/07/14/use-bert/" class="article-date">
+  <time class="dt-published" datetime="2020-07-14T03:09:49.000Z" itemprop="datePublished">2020-07-14</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/yangxiaotang.github.io/categories/NLP/">NLP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/07/02/Mysql/">mysql</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      use_bert
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/07/01/Golang/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-01T10:46:06.000Z" itemprop="datePublished">Jul 1</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/07/01/Golang/">golang</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/07/01/Leetcode/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-01T10:34:32.000Z" itemprop="datePublished">Jul 1</time>
-</a>
+        <h3 id="使用bert-serving之前需要先安装tensorflow"><a href="#使用bert-serving之前需要先安装tensorflow" class="headerlink" title="使用bert_serving之前需要先安装tensorflow"></a>使用bert_serving之前需要先安装tensorflow</h3><p>pip install tensorflow==1.12(需要1.10及以上的版本)<br>pip install bert-serving-server==1.9.1<br>pip install bert-serving-client==1.9.1</p>
+<hr>
+<h3 id="下载bert模型并解压"><a href="#下载bert模型并解压" class="headerlink" title="下载bert模型并解压"></a>下载bert模型并解压</h3><p><a href="https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip" target="_blank" rel="noopener">https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip</a></p>
+<hr>
+<h3 id="启动bert-serving服务"><a href="#启动bert-serving服务" class="headerlink" title="启动bert_serving服务"></a>启动bert_serving服务</h3><p>bert-serving-start -model_dir D:\python\chinese_L-12_H-768_A-12\chinese_L-12_H-768_A-12 -num_worker=2</p>
+<h3 id="使用命令行来运行脚本，因为IDE运行会报错"><a href="#使用命令行来运行脚本，因为IDE运行会报错" class="headerlink" title="使用命令行来运行脚本，因为IDE运行会报错"></a>使用命令行来运行脚本，因为IDE运行会报错</h3>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/07/01/Leetcode/">leetcode</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/07/01/database-md/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-01T03:36:11.000Z" itemprop="datePublished">Jul 1</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/14/use-bert/" data-id="ckcpjxttq000qas512soa0sj9" data-title="use_bert" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/07/01/database-md/">stary_database.md</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/07/01/Linux/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-01T02:23:15.000Z" itemprop="datePublished">Jul 1</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/07/01/Linux/">linux.md</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/yangxiaotang.github.io/2020/06/21/HeyMan/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-06-21T11:26:32.000Z" itemprop="datePublished">Jun 21</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/yangxiaotang.github.io/2020/06/21/HeyMan/">Hi, I am Yang, nice to meet you!</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/yangxiaotang.github.io/archives/">&laquo; Prev</a><a class="page-number" href="/yangxiaotang.github.io/archives/">1</a><span class="page-number current">2</span>
-  </nav>
+<nav id="article-nav">
+  
+    <a href="/yangxiaotang.github.io/2020/07/16/ClimbStair/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ClimbStair
+        
+      </div>
+    </a>
+  
+  
+    <a href="/yangxiaotang.github.io/2020/07/10/Bash/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Bash</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
 
 </section>
         
