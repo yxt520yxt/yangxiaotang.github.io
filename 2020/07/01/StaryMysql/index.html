@@ -9,12 +9,12 @@
   <meta name="description" content="书籍的金券金豆等统计数据 t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推   t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count  period 为3的数据一般是下月月初计算出来的。      t_device 设备表  os_type 0 为安卓， 1为ios   jingyu_ca">
 <meta property="og:type" content="article">
 <meta property="og:title" content="StaryMysql">
-<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/index.html">
+<meta property="og:url" content="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/StaryMysql/index.html">
 <meta property="og:site_name" content="YangXiaoTang&#39;Blog">
 <meta property="og:description" content="书籍的金券金豆等统计数据 t_book_stat_xx xx例如可以是202007就是七月的书籍收入数据，一次类推   t_book_stat_xx period: 0 daily 1 weekly 2 monthly 3 all_count  period 为3的数据一般是下月月初计算出来的。      t_device 设备表  os_type 0 为安卓， 1为ios   jingyu_ca">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-10T09:22:30.000Z">
-<meta property="article:modified_time" content="2020-07-16T02:32:04.697Z">
+<meta property="article:published_time" content="2020-07-01T09:22:30.000Z">
+<meta property="article:modified_time" content="2020-07-23T06:32:46.293Z">
 <meta property="article:author" content="Mr.Yang">
 <meta name="twitter:card" content="summary">
   
@@ -78,8 +78,8 @@
       <div class="outer">
         <section id="main"><article id="post-StaryMysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/yangxiaotang.github.io/2020/07/10/StaryMysql/" class="article-date">
-  <time class="dt-published" datetime="2020-07-10T09:22:30.000Z" itemprop="datePublished">2020-07-10</time>
+    <a href="/yangxiaotang.github.io/2020/07/01/StaryMysql/" class="article-date">
+  <time class="dt-published" datetime="2020-07-01T09:22:30.000Z" itemprop="datePublished">2020-07-01</time>
 </a>
     
   <div class="article-category">
@@ -130,15 +130,48 @@
 <li>author_name 可以跟jingyu_user的nickname对应上</li>
 <li>up_chapter 得到的是书籍最后一章得章节id,但是也是不靠谱的，自己去chapter表里面找最好</li>
 </ul>
+<h2 id="t-book-detail"><a href="#t-book-detail" class="headerlink" title="t_book_detail"></a>t_book_detail</h2><p>article_compete_batch 征文活动批次</p>
+<ul>
+<li>1 多职业霸总征文大赛</li>
+<li>2 疫情爆更活动</li>
+<li>3 Fantastic Life Writing Contest</li>
+<li>4 LGBT+ Writing Contest</li>
+<li>5 LGBT+ …（泰语征文比赛）</li>
+<li>6 LGBT+ … (菲律宾语)</li>
+<li>7 (青春征文)</li>
+<li>9 Fantasty Romance II Writing Contest</li>
+<li>10 Girl Power Revenge Writing Contest</li>
+</ul>
 <h2 id="t-book-statistical-data"><a href="#t-book-statistical-data" class="headerlink" title="t_book-statistical_data"></a>t_book-statistical_data</h2><ul>
 <li>这个表格的数据一本书最多只能有两行数据</li>
 <li>product=0代表dreame的数据，还有一个是product=1代表ficfun的数据</li>
+</ul>
+<h2 id="t-user-sign-info"><a href="#t-user-sign-info" class="headerlink" title="t_user_sign_info"></a>t_user_sign_info</h2><p>status 是作者个人信息是否通过审核    0等待，1拒绝，  2接受</p>
+<h2 id="没用的表格"><a href="#没用的表格" class="headerlink" title="没用的表格"></a>没用的表格</h2><p><del>t_user_sign_apply_new</del><br><del>t_user_sign_operator</del></p>
+<h2 id="t-sign-review-的status"><a href="#t-sign-review-的status" class="headerlink" title="t_sign_review 的status"></a>t_sign_review 的status</h2><p>审核流程中的各种状态：</p>
+<ul>
+<li>13本地编辑审核</li>
+<li>0责编审核</li>
+<li>24副主编审核</li>
+<li>2主编审核</li>
+<li>25 副总编审核</li>
+<li>4总编审核</li>
+<li>6审核完成</li>
+<li>-1审核被拒</li>
+<li>-2 unknow</li>
+<li>8 作者提交个人信息</li>
+<li>9 要求作者更新信息</li>
+<li>10合同准备中</li>
+<li>11签约完成</li>
+<li>12解约</li>
+<li>21已经发起第三方签约请求</li>
+<li>22签约取消</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/10/StaryMysql/" data-id="ckcu4fnrw000o445191yefqjg" data-title="StaryMysql" class="article-share-link">Share</a>
+      <a data-url="https://yxt520yxt.github.io/yangxiaotang.github.io/2020/07/01/StaryMysql/" data-id="ckcu4fnrw000o445191yefqjg" data-title="StaryMysql" class="article-share-link">Share</a>
       
       
       
@@ -148,19 +181,19 @@
     
 <nav id="article-nav">
   
-    <a href="/yangxiaotang.github.io/2020/07/10/Bash/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/01/Leetcode/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Bash
+          leetcode
         
       </div>
     </a>
   
   
-    <a href="/yangxiaotang.github.io/2020/07/10/Git/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/yangxiaotang.github.io/2020/07/01/database-md/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Git</div>
+      <div class="article-nav-title">stary_database.md</div>
     </a>
   
 </nav>
